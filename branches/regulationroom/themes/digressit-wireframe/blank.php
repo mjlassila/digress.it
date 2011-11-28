@@ -14,7 +14,7 @@ Template Name: Blank
 <?php global $blog_id, $current_user, $current_page_name, $digressit_options; ?>
 <html <?php language_attributes(); ?>>
 <head>
-<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" /> d
+<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
 <title><?php wp_title(''); ?></title>
 <?php 
 get_currentuserinfo(); 

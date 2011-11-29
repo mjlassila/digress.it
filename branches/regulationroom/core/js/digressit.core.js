@@ -469,6 +469,11 @@ jQuery(document).ready(function() {
             jQuery('body').displayerrorslightbox(data);
             return;
         }
+        
+        // NEED TO MOVE THIS INTO REGULATIONROOM
+        if (typeof RR !== 'undefined' && RR.exitSurvey) {
+            RR.exitSurvey.userConditionsMet = false;
+        }
 
 //        console.log(jQuery('#selected_paragraph_number').val());
         var selected_paragraph_number = parseInt(  jQuery('#selected_paragraph_number').val()  );

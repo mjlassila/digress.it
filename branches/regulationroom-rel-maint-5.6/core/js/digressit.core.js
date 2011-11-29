@@ -1023,7 +1023,10 @@ jQuery(document).ready(function() {
                 return;
             }
             else if(item){
-                jQuery(item).show();            
+                // RR-319 Quick fix: don't show reply button on All tab.
+                // This is a case where digressit and regulationroom are in conflict.
+                // Should be fixed in regulationroom.
+                //jQuery(item).show();       
             }
         }
     });    

@@ -472,7 +472,7 @@ jQuery(document).ready(function() {
         
         // NEED TO MOVE THIS INTO REGULATIONROOM
         if (typeof RR !== 'undefined' && RR.exitSurvey) {
-            RR.exitSurvey.userConditionsMet = false;
+            RR.exitSurvey.serverConditionsMet = false;
         }
 
 //        console.log(jQuery('#selected_paragraph_number').val());

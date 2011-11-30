@@ -28,6 +28,10 @@ wp_head();
 <body>
 
 <?php 
+do_action('add_header_image');
+?>
+<div style="clear:both;"></div>
+<?php
 while ( have_posts() ) {
     the_post(); 
     the_content();

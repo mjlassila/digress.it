@@ -459,20 +459,25 @@ jQuery(document).ready(function() {
      *        AJAX RESPONSES -
      *
      *        
-     */
+     */ 
     
+    /*
+    This allows the digressit add_comment method to be extended
+    by another plugin:
     AjaxResult.add_comment = function(data) {
+        AjaxResult.digressit_add_comment(data);
+        // plugin specific code here
+    }  
+    */     
+    AjaxResult.add_comment = AjaxResult.digressit_add_comment;
+      
+    AjaxResult.digressit_add_comment = function(data) {
         var result_id = parseInt(data.message.comment_ID);
         var confirmation_lightbox = 'lightbox-submit-comment-success';
 
         if(data.status == 0){
             jQuery('body').displayerrorslightbox(data);
             return;
-        }
-        
-        // NEED TO MOVE THIS INTO REGULATIONROOM
-        if (typeof RR !== 'undefined' && RR.exitSurvey) {
-            RR.exitSurvey.serverConditionsMet = false;
         }
 
 //        console.log(jQuery('#selected_paragraph_number').val());

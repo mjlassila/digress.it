@@ -98,5 +98,4 @@ if(function_exists('digressit_body_class')){
 <?php
 do_action('secondary_menu');
 ?>
-
-<a id="startcontent"></a>
+<a id="startcontent" tabindex="0"></a>

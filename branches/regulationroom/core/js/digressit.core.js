@@ -71,14 +71,19 @@ jQuery(document).ready(function() {
         
     });
 
+    var id;
     jQuery(window).resize(function(){
         if(digressit_enabled){
-            jQuery('#commentbox').position_main_elements();            
+            //jQuery('#commentbox').position_main_elements();            
             //console.log('resize');
+            clearTimeout(id);
+            id = setTimeout(doneResizing, 100);
         }
     });
     
-    
+    function doneResizing(){
+        jQuery('#commentbox').position_main_elements();
+    }
     
     /*** 
      *        USER INTERACTION
@@ -1786,7 +1791,6 @@ jQuery.fn.extend({
             jQuery("#commentbox-header").css('top', '0px');
             jQuery("#commentbox").css('top',  parseInt(jQuery('#wpadminbar').outerHeight()) +  parseInt(jQuery('#commentbox-header').outerHeight()) + 5 + 'px');
             jQuery("#commentbox").css('height', '90%');
-            
         }    
         else if(scroll_top < lock_position && jQuery("#commentbox").css('position') != 'absolute' ){
             jQuery("#commentbox, #commentbox-header").css('position', 'absolute');
@@ -1794,6 +1798,11 @@ jQuery.fn.extend({
             jQuery("#commentbox-header").css('top', '0px' );
             jQuery("#commentbox").css('top', parseInt(jQuery('#commentbox-header').top) + parseInt(jQuery('#commentbox-header').outerHeight()) + 'px');
             jQuery("#commentbox").css('height', jQuery(window).height() - 250 + 'px');
+        }
+        else if(jQuery("#commentbox").css('position') != 'absolute'){
+            var left = parseInt(jQuery('#content').offset().left) + 565  ;            
+            jQuery("#commentbox, #commentbox-header").css('position', 'fixed');
+            jQuery("#commentbox, #commentbox-header").css('left', left + 'px');
         }
     
         //bottom of page

@@ -505,7 +505,8 @@ jQuery(document).ready(function() {
             if(jQuery('#paragraph-block-' + selected_paragraph_number).length){
                 jQuery('#respond').appendTo('#paragraph-block-' + selected_paragraph_number + ' .toplevel-respond');            
                 jQuery('#'+parent_id).after(new_comment);
-                jQuery('.comment-reply').html('reply');
+                
+
 
                 if(jQuery('#'+parent_id).hasClass('depth-1')){
                     jQuery('#'+comment_id).addClass('depth-2');                    
@@ -551,7 +552,6 @@ jQuery(document).ready(function() {
 
         }
 
-        // RY We want to show the buttons, so this should be removed. The buttons aren't there yet, though.
         jQuery('#'+comment_id + ' .comment-buttons').hide();
         
         jQuery('.new_comment').removeClass('new_comment');
@@ -572,13 +572,13 @@ jQuery(document).ready(function() {
         jQuery('#comment_parent').val(0);
         
         jQuery.fn.showCommentBoxCommentState();
-    
-        jQuery('body').openlightbox(confirmation_lightbox);
+
+        jQuery.fn.showReplyButtons('.comment-reply');
         
-        return;
+        jQuery('body').openlightbox(confirmation_lightbox);
     }
     
-
+    
     /*** 
      *        AJAX FUNCTIONS
      *
@@ -1667,16 +1667,12 @@ jQuery(document).ready(function() {
         var top = 0;
         var comment_id = jQuery(this).attr('data');
         var current_comment_id = '#comment-'+ blog_ID +'-'+comment_id;        
-//        var paragraphnumber = jQuery(current_comment_id + ' .comment-paragraph-number').attr('value');
-//        var comment_id = jQuery(current_comment_id + ' .comment-id').attr('value');
         var blog_id = jQuery(current_comment_id + ' .comment-blog-id').attr('value');
 
         var paragraphnumber = selected_paragraphnumber = jQuery('#selected_paragraph_number').attr('value');
 
-        
-
+        // Replying
         if(jQuery('#comment_parent').val() == 0){
-
 
             jQuery('#selected_paragraph_number').attr('value', paragraphnumber);
             jQuery('#comment_parent').val(comment_id);
@@ -1690,8 +1686,6 @@ jQuery(document).ready(function() {
             jQuery('.textblock').removeClass('selected-textblock')
                                 .removeAttr('tabindex');    
             jQuery('.commenticonbox').removeClass('selected-paragraph');
-
-//            alert(jQuery('#comment_parent').val());
 
             if(paragraphnumber > 0){
                 jQuery('#textblock-' + paragraphnumber).addClass('selected-textblock');
@@ -1711,20 +1705,16 @@ jQuery(document).ready(function() {
             var scrollto = ((top - 100) > 0)  ? (top - 100) : 0;
             jQuery('#respond').appendTo(current_comment_id + ' .comment-respond');        
             jQuery(window).scrollTo(scrollto, 200);        
-            jQuery('#commentbox').scrollTo( current_comment_id , 500, {easing:'easeOutBack'});
-
-            jQuery(current_comment_id + ' .comment-reply').val('cancel reply')
-                                                          .attr('title', 'Cancel your reply');
+            jQuery('#commentbox').scrollTo(current_comment_id , 500, {easing:'easeOutBack'});
             
             jQuery.fn.showCommentBoxReplyState();
-
         }
+        
+        // Cancelling reply
         else{
 
             jQuery('#comment_parent').val(0);
-            jQuery('.comment-reply').val('reply')
-                                    .attr('title', 'Reply to this comment');
-                                    
+                             
             jQuery.fn.showCommentBoxCommentState();
                                          
             if(jQuery('.paragraph-block').length){
@@ -1733,7 +1723,6 @@ jQuery(document).ready(function() {
             else{    
                 jQuery('#respond').appendTo('#toplevel-commentbox');
             }
-//            jQuery(this).removeClass('cancel-response');
 
 
         }
@@ -2078,32 +2067,29 @@ jQuery.fn.assignLightboxFocus = function(lightboxElement) {
         focus.focus();
     }
 
-}
+};
 
 jQuery.fn.showCommentBoxReplyState = function() {
     jQuery('#submit-comment').val('submit reply');
     jQuery('#comment-label-comment').hide();
     jQuery('#comment-label-reply').show();
-}
+};
 
 jQuery.fn.showCommentBoxCommentState = function() {
     jQuery('#submit-comment').val('submit comment');        
     jQuery('#comment-label-reply').hide();
     jQuery('#comment-label-comment').show();  
-    
-    jQuery('.comment-reply').val('reply')
-                            .attr('title', 'Reply to this comment');  
-}
+};
 
 jQuery.fn.disableCommentFormButtons = function() {
     jQuery('#submit-wrapper input').addClass('disabled')
-                                  .prop('disabled', true);   
-}
+                                   .prop('disabled', true);   
+};
 
 jQuery.fn.enableCommentFormButtons = function() {
     jQuery('#submit-wrapper input').removeClass('disabled')
                                    .prop('disabled', false);   
-}
+};
 
 /*
  * focus is a jQuery object or a jQuery selector
@@ -2142,5 +2128,20 @@ jQuery.fn.assignFocus = function(focus) {
             } 
         } 
     } 
-}
+};
 
+jQuery.fn.showCancelReplyButton = function(button) {
+    
+    jQuery(button).addClass('cancel-reply')
+                  .removeClass('reply')
+                  .val('Cancel Reply')
+                  .attr('title', 'Cancel your reply');
+};
+
+jQuery.fn.showReplyButtons = function(buttons) {
+
+    jQuery(buttons).addClass('reply')
+                   .removeClass('cancel-reply')
+                   .val('Reply')
+                   .attr('title', 'Reply to this comment');        
+};

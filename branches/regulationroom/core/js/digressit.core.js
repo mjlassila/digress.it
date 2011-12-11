@@ -1732,82 +1732,99 @@ jQuery(document).ready(function() {
     
 });
 
-
-
-jQuery.fn.extend({    
-
-    position_main_elements: function() {
+jQuery.fn.position_main_elements = function() {
         
-        if(typeof override_comment_box != 'undefined'){
-            jQuery("#commentbox").css(override_comment_box_specs);
-            return;
-                        
-        }
+    var commentBox = jQuery('#commentbox'),
+        commentBoxHeader = jQuery('#commentbox-header'),
+        dynamicSidebar = jQuery('#dynamic-sidebar'),
+        content = jQuery('#content'),
+        browser_width,
+        browser_height,
+        content_height,
+        default_top,
+        scroll_top,
+        lock_position,
+        left,
+        styles;
+        
+    if (typeof override_comment_box !== 'undefined') {
+        commentBox.css(override_comment_box_specs);
+        return;                 
+    }
+
+    browser_width = jQuery(window).width();
+    browser_height = jQuery(window).height();
+    content_height = content.height();
+    default_top = parseInt(content.position().top);
+    scroll_top =  default_top  + parseInt(jQuery(window).scrollTop());
+    lock_position = content.offset().top;
+        
+    //console.log(scroll_top + ' - '+ lock_position+"\n");
     
-        var browser_width = jQuery(window).width();
-        var browser_height = jQuery(window).height();
-        var content_height = jQuery('#content').height();
-        var default_top = parseInt(jQuery('#content').position().top);
-        var scroll_top =  default_top  + parseInt(jQuery(window).scrollTop());
-        var lock_position = jQuery('#content').offset().top;
+    //iOS
+    if (iOS) {
+  
+        styles = { 'position' : 'absolute',
+                   'top' : (scroll_top < 360) ? 260: (scroll_top - 100) };
+                   
+        commentBoxHeader.css(cssMap);                        
+        commentBox.css(cssMap);        
+        dynamicSidebar.css(cssMap);                
         
+        return;
+    }
+
+    //top of page
+    if (scroll_top > lock_position && commentBox.css('position') != 'fixed' ) {
         
-        //console.log(scroll_top + ' - '+ lock_position+"\n");
-        //iOS
-
-        if(iOS){
-            var ipad_scroll_top_position = (scroll_top < 360) ? 260: (scroll_top - 100) ;
-
-            jQuery("#commentbox-header").css('position',  'absolute');            
-            jQuery("#commentbox-header").css('top', ipad_scroll_top_position);            
-
-            jQuery("#commentbox").css('position',  'absolute');            
-            jQuery("#commentbox").css('top', ipad_scroll_top_position);
-            
-            jQuery("#dynamic-sidebar").css('position',  'absolute');            
-            jQuery("#dynamic-sidebar").css('top',  ipad_scroll_top_position);                
-            
-            return;
-        }
-    
+        left = parseInt(content.offset().left) + 565;      
+              
+        styles = { 'position' : 'fixed',
+                   'left' : left + 'px' };
+                   
+        commentBoxHeader.css(styles)
+                        .css('top', '0px');
         
-            
-        //top of page
-        if(scroll_top > lock_position && jQuery("#commentbox").css('position') != 'fixed' ){
-            var left = parseInt(jQuery('#content').offset().left) + 565  ;            
-            jQuery("#commentbox, #commentbox-header").css('position', 'fixed');
-            jQuery("#commentbox, #commentbox-header").css('left', left + 'px');
-            jQuery("#commentbox-header").css('top', '0px');
-            jQuery("#commentbox").css('top',  parseInt(jQuery('#wpadminbar').outerHeight()) +  parseInt(jQuery('#commentbox-header').outerHeight()) + 5 + 'px');
-            jQuery("#commentbox").css('height', '90%');
-        }    
-        else if(scroll_top < lock_position && jQuery("#commentbox").css('position') != 'absolute' ){
-            jQuery("#commentbox, #commentbox-header").css('position', 'absolute');
-            jQuery("#commentbox, #commentbox-header").css('left', '565px'    );
-            jQuery("#commentbox-header").css('top', '0px' );
-            jQuery("#commentbox").css('top', parseInt(jQuery('#commentbox-header').top) + parseInt(jQuery('#commentbox-header').outerHeight()) + 'px');
-            jQuery("#commentbox").css('height', jQuery(window).height() - 250 + 'px');
-        }
-        else if(jQuery("#commentbox").css('position') != 'absolute'){
-            var left = parseInt(jQuery('#content').offset().left) + 565  ;            
-            jQuery("#commentbox, #commentbox-header").css('position', 'fixed');
-            jQuery("#commentbox, #commentbox-header").css('left', left + 'px');
-        }
-    
-        //bottom of page
-        if(scroll_top > (content_height - ((browser_height/2)+20)) && jQuery("#commentbox").css('position') == 'fixed'){
-            jQuery("#commentbox").css('height', '78%');
-            jQuery("#commentbox").addClass('resized');
-        }
-        else if(scroll_top < (content_height - ((browser_height/2)+20)) && jQuery("#commentbox").hasClass('resized')){
-            jQuery("#commentbox").css('height', '90%');            
-            jQuery("#commentbox").removeClass('resized');
-        }
+        commentBox.css(styles)
+                  .css('top',  parseInt(jQuery('#wpadminbar').outerHeight()) +  parseInt(commentBox.outerHeight()) + 5 + 'px')
+                  .css('height', '90%');
+                  
+    } else if (scroll_top < lock_position && commentBox.css('position') !== 'absolute') {
+        
+        styles = { 'position' : 'absolute',
+                   'left' : '565px' };
+                   
+        commentBoxHeader.css(styles)
+                        .css('top', '0px' );
+        
+        commentBox.css(styles)
+                  .css('top', parseInt(commentBoxHeader.top) + parseInt(commentBoxHeader.outerHeight()) + 'px')
+                  .css('height', jQuery(window).height() - 250 + 'px');
+                  
+    } else if (commentBox.css('position') !== 'absolute') {
+        
+        left = parseInt(content.offset().left) + 565; 
+        
+        styles = { 'position' : 'fixed',
+                   'left' : left + 'px' };
+                   
+        commentBox.css(styles);                    
+        commentBoxHeader.css(styles);
+    }
+
+    //bottom of page
+    if (scroll_top > (content_height - ((browser_height/2)+20)) && commentBox.css('position') === 'fixed') {
+        
+        commentBox.css('height', '78%')
+                  .addClass('resized');
+                  
+    } else if (scroll_top < (content_height - ((browser_height/2)+20)) && commentBox.hasClass('resized')) {
+        
+        commentBox.css('height', '90%')           
+                  .removeClass('resized');
     }    
+};    
     
-});
-
-
 jQuery.fn.openlightbox = function (lightbox, params, event){
     
     var lightboxData = jQuery('.' + lightbox).attr('data');

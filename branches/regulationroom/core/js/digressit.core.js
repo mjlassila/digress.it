@@ -505,8 +505,7 @@ jQuery(document).ready(function() {
             if(jQuery('#paragraph-block-' + selected_paragraph_number).length){
                 jQuery('#respond').appendTo('#paragraph-block-' + selected_paragraph_number + ' .toplevel-respond');            
                 jQuery('#'+parent_id).after(new_comment);
-                
-
+                jQuery('.comment-reply').html('reply');
 
                 if(jQuery('#'+parent_id).hasClass('depth-1')){
                     jQuery('#'+comment_id).addClass('depth-2');                    
@@ -552,6 +551,7 @@ jQuery(document).ready(function() {
 
         }
 
+        // RY We want to show the buttons, so this should be removed. The buttons aren't there yet, though.
         jQuery('#'+comment_id + ' .comment-buttons').hide();
         
         jQuery('.new_comment').removeClass('new_comment');
@@ -572,13 +572,13 @@ jQuery(document).ready(function() {
         jQuery('#comment_parent').val(0);
         
         jQuery.fn.showCommentBoxCommentState();
-
-        jQuery.fn.showReplyButtons('.comment-reply');
-        
+    
         jQuery('body').openlightbox(confirmation_lightbox);
+        
+        return;
     }
     
-    
+
     /*** 
      *        AJAX FUNCTIONS
      *
@@ -1667,12 +1667,16 @@ jQuery(document).ready(function() {
         var top = 0;
         var comment_id = jQuery(this).attr('data');
         var current_comment_id = '#comment-'+ blog_ID +'-'+comment_id;        
+//        var paragraphnumber = jQuery(current_comment_id + ' .comment-paragraph-number').attr('value');
+//        var comment_id = jQuery(current_comment_id + ' .comment-id').attr('value');
         var blog_id = jQuery(current_comment_id + ' .comment-blog-id').attr('value');
 
         var paragraphnumber = selected_paragraphnumber = jQuery('#selected_paragraph_number').attr('value');
 
-        // Replying
+        
+
         if(jQuery('#comment_parent').val() == 0){
+
 
             jQuery('#selected_paragraph_number').attr('value', paragraphnumber);
             jQuery('#comment_parent').val(comment_id);
@@ -1686,6 +1690,8 @@ jQuery(document).ready(function() {
             jQuery('.textblock').removeClass('selected-textblock')
                                 .removeAttr('tabindex');    
             jQuery('.commenticonbox').removeClass('selected-paragraph');
+
+//            alert(jQuery('#comment_parent').val());
 
             if(paragraphnumber > 0){
                 jQuery('#textblock-' + paragraphnumber).addClass('selected-textblock');
@@ -1705,16 +1711,20 @@ jQuery(document).ready(function() {
             var scrollto = ((top - 100) > 0)  ? (top - 100) : 0;
             jQuery('#respond').appendTo(current_comment_id + ' .comment-respond');        
             jQuery(window).scrollTo(scrollto, 200);        
-            jQuery('#commentbox').scrollTo(current_comment_id , 500, {easing:'easeOutBack'});
+            jQuery('#commentbox').scrollTo( current_comment_id , 500, {easing:'easeOutBack'});
+
+            jQuery(current_comment_id + ' .comment-reply').val('cancel reply')
+                                                          .attr('title', 'Cancel your reply');
             
             jQuery.fn.showCommentBoxReplyState();
+
         }
-        
-        // Cancelling reply
         else{
 
             jQuery('#comment_parent').val(0);
-                             
+            jQuery('.comment-reply').val('reply')
+                                    .attr('title', 'Reply to this comment');
+                                    
             jQuery.fn.showCommentBoxCommentState();
                                          
             if(jQuery('.paragraph-block').length){
@@ -1723,6 +1733,7 @@ jQuery(document).ready(function() {
             else{    
                 jQuery('#respond').appendTo('#toplevel-commentbox');
             }
+//            jQuery(this).removeClass('cancel-response');
 
 
         }
@@ -1732,99 +1743,82 @@ jQuery(document).ready(function() {
     
 });
 
-jQuery.fn.position_main_elements = function() {
-        
-    var commentBox = jQuery('#commentbox'),
-        commentBoxHeader = jQuery('#commentbox-header'),
-        dynamicSidebar = jQuery('#dynamic-sidebar'),
-        content = jQuery('#content'),
-        browser_width,
-        browser_height,
-        content_height,
-        default_top,
-        scroll_top,
-        lock_position,
-        left,
-        styles;
-        
-    if (typeof override_comment_box !== 'undefined') {
-        commentBox.css(override_comment_box_specs);
-        return;                 
-    }
 
-    browser_width = jQuery(window).width();
-    browser_height = jQuery(window).height();
-    content_height = content.height();
-    default_top = parseInt(content.position().top);
-    scroll_top =  default_top  + parseInt(jQuery(window).scrollTop());
-    lock_position = content.offset().top;
+
+jQuery.fn.extend({    
+
+    position_main_elements: function() {
         
-    //console.log(scroll_top + ' - '+ lock_position+"\n");
+        if(typeof override_comment_box != 'undefined'){
+            jQuery("#commentbox").css(override_comment_box_specs);
+            return;
+                        
+        }
     
-    //iOS
-    if (iOS) {
-  
-        styles = { 'position' : 'absolute',
-                   'top' : (scroll_top < 360) ? 260: (scroll_top - 100) };
-                   
-        commentBoxHeader.css(cssMap);                        
-        commentBox.css(cssMap);        
-        dynamicSidebar.css(cssMap);                
+        var browser_width = jQuery(window).width();
+        var browser_height = jQuery(window).height();
+        var content_height = jQuery('#content').height();
+        var default_top = parseInt(jQuery('#content').position().top);
+        var scroll_top =  default_top  + parseInt(jQuery(window).scrollTop());
+        var lock_position = jQuery('#content').offset().top;
         
-        return;
-    }
+        
+        //console.log(scroll_top + ' - '+ lock_position+"\n");
+        //iOS
 
-    //top of page
-    if (scroll_top > lock_position && commentBox.css('position') != 'fixed' ) {
-        
-        left = parseInt(content.offset().left) + 565;      
-              
-        styles = { 'position' : 'fixed',
-                   'left' : left + 'px' };
-                   
-        commentBoxHeader.css(styles)
-                        .css('top', '0px');
-        
-        commentBox.css(styles)
-                  .css('top',  parseInt(jQuery('#wpadminbar').outerHeight()) +  parseInt(commentBox.outerHeight()) + 5 + 'px')
-                  .css('height', '90%');
-                  
-    } else if (scroll_top < lock_position && commentBox.css('position') !== 'absolute') {
-        
-        styles = { 'position' : 'absolute',
-                   'left' : '565px' };
-                   
-        commentBoxHeader.css(styles)
-                        .css('top', '0px' );
-        
-        commentBox.css(styles)
-                  .css('top', parseInt(commentBoxHeader.top) + parseInt(commentBoxHeader.outerHeight()) + 'px')
-                  .css('height', jQuery(window).height() - 250 + 'px');
-                  
-    } else if (commentBox.css('position') !== 'absolute') {
-        
-        left = parseInt(content.offset().left) + 565; 
-        
-        styles = { 'position' : 'fixed',
-                   'left' : left + 'px' };
-                   
-        commentBox.css(styles);                    
-        commentBoxHeader.css(styles);
-    }
+        if(iOS){
+            var ipad_scroll_top_position = (scroll_top < 360) ? 260: (scroll_top - 100) ;
 
-    //bottom of page
-    if (scroll_top > (content_height - ((browser_height/2)+20)) && commentBox.css('position') === 'fixed') {
+            jQuery("#commentbox-header").css('position',  'absolute');            
+            jQuery("#commentbox-header").css('top', ipad_scroll_top_position);            
+
+            jQuery("#commentbox").css('position',  'absolute');            
+            jQuery("#commentbox").css('top', ipad_scroll_top_position);
+            
+            jQuery("#dynamic-sidebar").css('position',  'absolute');            
+            jQuery("#dynamic-sidebar").css('top',  ipad_scroll_top_position);                
+            
+            return;
+        }
+    
         
-        commentBox.css('height', '78%')
-                  .addClass('resized');
-                  
-    } else if (scroll_top < (content_height - ((browser_height/2)+20)) && commentBox.hasClass('resized')) {
-        
-        commentBox.css('height', '90%')           
-                  .removeClass('resized');
+            
+        //top of page
+        if(scroll_top > lock_position && jQuery("#commentbox").css('position') != 'fixed' ){
+            var left = parseInt(jQuery('#content').offset().left) + 565  ;            
+            jQuery("#commentbox, #commentbox-header").css('position', 'fixed');
+            jQuery("#commentbox, #commentbox-header").css('left', left + 'px');
+            jQuery("#commentbox-header").css('top', '0px');
+            jQuery("#commentbox").css('top',  parseInt(jQuery('#wpadminbar').outerHeight()) +  parseInt(jQuery('#commentbox-header').outerHeight()) + 5 + 'px');
+            jQuery("#commentbox").css('height', '90%');
+        }    
+        else if(scroll_top < lock_position && jQuery("#commentbox").css('position') != 'absolute' ){
+            jQuery("#commentbox, #commentbox-header").css('position', 'absolute');
+            jQuery("#commentbox, #commentbox-header").css('left', '565px'    );
+            jQuery("#commentbox-header").css('top', '0px' );
+            jQuery("#commentbox").css('top', parseInt(jQuery('#commentbox-header').top) + parseInt(jQuery('#commentbox-header').outerHeight()) + 'px');
+            jQuery("#commentbox").css('height', jQuery(window).height() - 250 + 'px');
+        }
+        else if(jQuery("#commentbox").css('position') != 'absolute'){
+            var left = parseInt(jQuery('#content').offset().left) + 565  ;            
+            jQuery("#commentbox, #commentbox-header").css('position', 'fixed');
+            jQuery("#commentbox, #commentbox-header").css('left', left + 'px');
+        }
+    
+        //bottom of page
+        if(scroll_top > (content_height - ((browser_height/2)+20)) && jQuery("#commentbox").css('position') == 'fixed'){
+            jQuery("#commentbox").css('height', '78%');
+            jQuery("#commentbox").addClass('resized');
+        }
+        else if(scroll_top < (content_height - ((browser_height/2)+20)) && jQuery("#commentbox").hasClass('resized')){
+            jQuery("#commentbox").css('height', '90%');            
+            jQuery("#commentbox").removeClass('resized');
+        }
     }    
-};    
     
+});
+
+
 jQuery.fn.openlightbox = function (lightbox, params, event){
     
     var lightboxData = jQuery('.' + lightbox).attr('data');
@@ -2084,29 +2078,32 @@ jQuery.fn.assignLightboxFocus = function(lightboxElement) {
         focus.focus();
     }
 
-};
+}
 
 jQuery.fn.showCommentBoxReplyState = function() {
     jQuery('#submit-comment').val('submit reply');
     jQuery('#comment-label-comment').hide();
     jQuery('#comment-label-reply').show();
-};
+}
 
 jQuery.fn.showCommentBoxCommentState = function() {
     jQuery('#submit-comment').val('submit comment');        
     jQuery('#comment-label-reply').hide();
     jQuery('#comment-label-comment').show();  
-};
+    
+    jQuery('.comment-reply').val('reply')
+                            .attr('title', 'Reply to this comment');  
+}
 
 jQuery.fn.disableCommentFormButtons = function() {
     jQuery('#submit-wrapper input').addClass('disabled')
-                                   .prop('disabled', true);   
-};
+                                  .prop('disabled', true);   
+}
 
 jQuery.fn.enableCommentFormButtons = function() {
     jQuery('#submit-wrapper input').removeClass('disabled')
                                    .prop('disabled', false);   
-};
+}
 
 /*
  * focus is a jQuery object or a jQuery selector
@@ -2145,20 +2142,5 @@ jQuery.fn.assignFocus = function(focus) {
             } 
         } 
     } 
-};
+}
 
-jQuery.fn.showCancelReplyButton = function(button) {
-    
-    jQuery(button).addClass('cancel-reply')
-                  .removeClass('reply')
-                  .val('Cancel Reply')
-                  .attr('title', 'Cancel your reply');
-};
-
-jQuery.fn.showReplyButtons = function(buttons) {
-
-    jQuery(buttons).addClass('reply')
-                   .removeClass('cancel-reply')
-                   .val('Reply')
-                   .attr('title', 'Reply to this comment');        
-};

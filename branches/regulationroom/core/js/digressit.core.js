@@ -1780,9 +1780,9 @@ jQuery.fn.position_main_elements = function() {
         styles = { 'position' : 'absolute',
                    'top' : (scroll_top < 360) ? 260: (scroll_top - 100) };
                    
-        commentBoxHeader.css(cssMap);                        
-        commentBox.css(cssMap);        
-        dynamicSidebar.css(cssMap);                
+        commentBoxHeader.css(styles);                        
+        commentBox.css(styles);        
+        dynamicSidebar.css(styles);                
         
         return;
     }

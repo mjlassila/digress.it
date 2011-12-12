@@ -13,12 +13,12 @@ if ( function_exists('post_password_required')  ) {
 }
 ?>
 <div id="commentbox-header">
-	<?php do_action('commenbox_header'); ?>
+	<?php do_action('commentbox_header'); ?>
 </div>
 
 <div id="commentbox">
 <div id="commentwindow">
-	<?php do_action('digressit_custom_commenbox_header'); ?>
+	<?php do_action('digressit_custom_commentbox_header'); ?>
 	
 	<div id="toplevel-commentbox">
 	<div name="respond-form" id="respond">

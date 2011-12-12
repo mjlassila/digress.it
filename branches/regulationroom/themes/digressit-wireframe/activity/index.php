@@ -2,7 +2,7 @@
 
 	<div id="container">
 		<div id="content">
-
+hello!!
 			<?php if ( !is_user_logged_in() ) : ?>
 				<h3><?php _e( 'Site Activity', 'buddypress' ) ?></h3>
 			<?php endif; ?>

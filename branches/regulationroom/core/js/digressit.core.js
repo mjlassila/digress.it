@@ -1744,7 +1744,6 @@ jQuery(document).ready(function() {
 });
 
 
-
 jQuery.fn.position_main_elements = function() {
         
     var commentBox = jQuery('#commentbox'),
@@ -1788,7 +1787,7 @@ jQuery.fn.position_main_elements = function() {
     }
 
     //top of page
-    if (scroll_top > lock_position && commentBox.css('position') != 'fixed' ) {
+    if (scroll_top > lock_position && commentBox.css('position') !== 'fixed' ) {
         
         left = parseInt(content.offset().left) + 565;      
               

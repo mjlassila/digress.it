@@ -466,16 +466,6 @@ jQuery(document).ready(function() {
      *        
      */ 
     
-    /*
-    This allows the digressit add_comment method to be extended
-    by another plugin:
-    AjaxResult.add_comment = function(data) {
-        AjaxResult.digressit_add_comment(data);
-        // plugin specific code here
-    }  
-    */     
-    AjaxResult.add_comment = AjaxResult.digressit_add_comment;
-      
     AjaxResult.digressit_add_comment = function(data) {
         var result_id = parseInt(data.message.comment_ID);
         var confirmation_lightbox = 'lightbox-submit-comment-success';
@@ -578,6 +568,15 @@ jQuery(document).ready(function() {
         return;
     }
     
+    /*
+    This allows the digressit add_comment method to be extended
+    by another plugin.
+    AjaxResult.add_comment = function(data) {
+        AjaxResult.digressit_add_comment(data);
+        // plugin specific code would go here
+    }  
+    */ 
+    AjaxResult.add_comment = AjaxResult.digressit_add_comment; 
 
     /*** 
      *        AJAX FUNCTIONS

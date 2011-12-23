@@ -67,6 +67,7 @@ if ( function_exists('post_password_required')  ) {
 		<?php else: ?>
 			<div id="must-be-logged-in">
 			<?php echo strlen(get_post_meta($post->ID, 'discussion_closed', true)) ? get_post_meta($post->ID, 'discussion_closed', true) : __('This discussion is now closed.','digressit'); ?>
+				<input name="selected_paragraph_number" type="hidden" id="selected_paragraph_number"  value="0" />
 			</div>
 		
 		<?php endif; ?>

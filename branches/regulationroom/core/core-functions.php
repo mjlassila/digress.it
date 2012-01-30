@@ -1268,7 +1268,7 @@ function get_root_domain(){
 	$testing_mode = false;
 	$production_mode = false;
 
-	return "http://" . DOMAIN_CURRENT_SITE; //isset($_SERVER['HTTPS']) ? "https://". DOMAIN_CURRENT_SITE : "http://" . DOMAIN_CURRENT_SITE;
+	return site_url();
 }
 
 

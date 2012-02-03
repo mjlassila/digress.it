@@ -242,9 +242,12 @@ function standard_digressit_comment_parser($comment, $args, $depth) {
  */
 function digressit_comment_form(){
     global $blog_id;
+    
+    // This gets the value from the blog-specific options table (e.g., wp_6_options)
+    $admin_email = get_option('admin_email');
 
     ?>
-    <a class="hidden-offscreen" href="#commentformend">Skip over comment form.</a>
+    <a class="hidden-offscreen" href="#commentformend">Skip over comment form</a>
     <form method="post" action="/" id="add-comment">
 
         <?php if(!is_user_logged_in()): ?>
@@ -261,12 +264,12 @@ function digressit_comment_form(){
             
             <span id="comment-label-comment">
                 Enter your comment on the selected section here. If you have not selected a numbered section to comment on, 
-                you must do so before commenting. If you have trouble commenting, please <a href="mailto:regulationroom@cornell.edu">email us for technical assistance</a>.
+                you must do so before commenting. If you have trouble commenting, please <a href="mailto:<?php echo $admin_email; ?>">email us for technical assistance</a>.
             </span>
     
             <span id="comment-label-reply" style="display: none;">
                 Enter your reply to the selected comment here. 
-                If you have trouble replying, please <a href="mailto:regulationroom@cornell.edu">email us for technical assistance</a>.
+                If you have trouble replying, please <a href="mailto:<?php echo $admin_email; ?>">email us for technical assistance</a>.
             </span>
                     
         </label>

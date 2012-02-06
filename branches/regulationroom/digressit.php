@@ -18,7 +18,7 @@ Mark James, for the famfamfam iconset @ http://www.famfamfam.com/lab/icons/silk/
 Matteo Bicocchi @ www.open-lab.com
 */
 
-global $commentbrowser, $blog_id, $current_user, $current_user_comments, $development_mode, $testing_mode, $production_mode;
+global $commentbrowser, $blog_id, $current_user, $current_user_comments;
 global $digressit_content_function, $digressit_comments_function, $digressit_commentbox_function,$is_commentbrowser, $browser;
 global $using_mainpage_nav_walker;
 

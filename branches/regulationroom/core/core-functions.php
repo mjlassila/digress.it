@@ -1,5 +1,5 @@
 <?php 
-global $commentbrowser, $blog_id, $current_user, $current_user_comments, $development_mode, $testing_mode, $production_mode;
+global $commentbrowser, $blog_id, $current_user, $current_user_comments;
 global $digressit_content_function, $digressit_comments_function, $digressit_commentbox_function,$is_commentbrowser;
 global $browser, $post_paragraph_count;
 
@@ -1263,14 +1263,8 @@ function custom_digressit_logo(){
  * 
  */
 function get_root_domain(){
-	global $development_mode,$testing_mode, $production_mode;
-	$development_mode = false;
-	$testing_mode = false;
-	$production_mode = false;
-
-	return site_url();
+	return substr(network_home_url(), 0, -1); // trim final slash
 }
-
 
 function digressit_enabled(){
 	global $digressit_options;

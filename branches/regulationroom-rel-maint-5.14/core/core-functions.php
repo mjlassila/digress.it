@@ -1268,7 +1268,7 @@ function get_root_domain(){
 	$testing_mode = false;
 	$production_mode = false;
 
-	return site_url();
+    return substr(network_home_url(), 0, -1); // trim final slash
 }
 
 

@@ -1262,7 +1262,7 @@ function custom_digressit_logo(){
 /**
  * 
  */
-function get_root_domain(){
+function get_root_url(){
 	return substr(network_home_url(), 0, -1); // trim final slash
 }
 
@@ -1293,13 +1293,13 @@ function digressit_core_print_scripts(){
 
 
 
-	$url = parse_url(get_root_domain(). $_SERVER["REQUEST_URI"]);
+	$url = parse_url(get_root_url(). $_SERVER["REQUEST_URI"]);
 
 	if(!is_admin()){
 		?>
 <script type='text/javascript'>	
-var siteurl = '<?php echo get_root_domain(); ?>';
-var baseurl = '<?php echo get_root_domain(); ?>';
+var siteurl = '<?php echo get_root_url(); ?>';
+var baseurl = '<?php echo get_root_url(); ?>';
 var siteurlpath = '<?php echo site_url(); ?>';
 
 var user_ID =  <?php echo $current_user->ID; ?>;

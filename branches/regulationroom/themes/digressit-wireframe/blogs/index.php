@@ -5,7 +5,7 @@
 
 		<form action="" method="post" id="blogs-directory-form" class="dir-form">
 
-			<h3><?php _e( 'Blogs Directory', 'buddypress' ) ?><?php if ( is_user_logged_in() && bp_blog_signup_enabled() ) : ?> &nbsp;<a class="button" href="<?php echo bp_get_root_domain() . '/' . BP_BLOGS_SLUG . '/create/' ?>"><?php _e( 'Create a Blog', 'buddypress' ) ?></a><?php endif; ?></h3>
+			<h3><?php _e( 'Blogs Directory', 'buddypress' ) ?><?php if ( is_user_logged_in() && bp_blog_signup_enabled() ) : ?> &nbsp;<a class="button" href="<?php echo bp_get_root_url() . '/' . BP_BLOGS_SLUG . '/create/' ?>"><?php _e( 'Create a Blog', 'buddypress' ) ?></a><?php endif; ?></h3>
 
 			<?php do_action( 'bp_before_directory_blogs_content' ) ?>
 

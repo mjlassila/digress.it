@@ -91,15 +91,6 @@ function lightbox_login_ajax(){
                     <label for="user_pass"><?php _e('Password'); ?></label><br />
                     <input type="password" name="pwd" id="user_pass" class="input required" value="" size="25" />
                 </p>
-            
-                <div class="custom_register_links">
-                <?php if(has_action('custom_register_links')) :?>
-                    <p><?php do_action('custom_register_links'); ?></p>
-                <?php else: /* Applies only to digressit, not regulation room, so leaving non-accessible markup for now. */ ?>                    
-                    <p class="register-account-link">New user? <a href="<?php echo get_bloginfo('home'); ?>/wp-signup.php"  title="<?php _e('Create an account if you are a new user'); ?>"><?php _e('Create an account'); ?></a></p>
-                    <p class="lost-password-link"><a href="<?php echo wp_login_url(); ?>?action=lostpassword" title="<?php _e('Reset your password if you have lost it'); ?>"><?php _e('Lost Password?'); ?></a></p>
-                <?php endif; ?>
-                </div>
         
                 <input type="hidden" name="wp-submit" value="Log In" id="wp-submit">
                 <input type="hidden" name="redirect_to" value="<?php echo $_REQUEST['data']; ?>#login-success" /> 

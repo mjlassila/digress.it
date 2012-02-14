@@ -1263,7 +1263,9 @@ function custom_digressit_logo(){
  * 
  */
 function get_root_url(){
-	return substr(network_home_url(), 0, -1); // trim final slash
+    // Trim final slash. On single-site installs, it doesn't end in /, but on
+    // multi-site installs it does.
+    return preg_replace('/\/$/', '', network_home_url());
 }
 
 function digressit_enabled(){

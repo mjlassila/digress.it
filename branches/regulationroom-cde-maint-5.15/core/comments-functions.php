@@ -250,6 +250,8 @@ function digressit_comment_form(){
     <a class="hidden-offscreen" href="#commentformend">Skip over comment form</a>
     <form method="post" action="/" id="add-comment">
 
+        <?php /* This code needs to be conditional on the value of the option set in back end under Settings > Discussion: Comment author must fill out name and e-mail. 
+               * Removing from CDE version for quick fix.
         <?php if(!is_user_logged_in()): ?>
             <?php if(function_exists('display_recaptcha')):?>
                 <p><input type="text" class="comment-field-area" id="display_name"  name="author" value="Your Name" ><label for="display_name">Display Name</label><p>
@@ -259,7 +261,8 @@ function digressit_comment_form(){
                 <p><input type="text" class="comment-field-area" id="user_email" name="user_email" value="Email"><label for="user_email">Email</label><p>
             <?php endif;?>
         <?php endif; ?>
-        
+        */ ?>
+             
         <label for='comment' id="comment-label" class="hidden-offscreen">
             
             <span id="comment-label-comment">

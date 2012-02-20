@@ -1,0 +1,254 @@
+/*	
+Theme Name: Digress.it Research Paper
+Theme URI: http://digress.it
+Description: Digress.it allows readers to comment paragraph by paragraph in the margins of a text. You can use it to comment, gloss, workshop, debate and more!
+Author: Eddie A Tejeda
+Version: 3.2
+Author URI: http://eddietejeda.com
+License: GPLv2 (http://creativecommons.org/licenses/GPL/2.0/)
+Tags: buddypress, comments, annotation, discussion, commenting, paragraph, education, transparency
+
+Special thanks to:	
+The developers of JQuery @ www.jquery.com
+Joss Winn, Tony Hirst and Alex Bilbie @ University of Lincoln 
+Jesse Wilbur, Ben Vershbow, Dan Visel and Bob Stein @ futureofthebook.org
+
+Previous Versions:
+Mark James, for the famfamfam iconset @ http://www.famfamfam.com/lab/icons/silk/
+Matteo Bicocchi @ www.open-lab.com
+
+*/
+
+
+body	{
+	margin: 0;
+	padding: 0;
+	height:100%; 
+	width: 100%;
+	overflow-y:auto;
+	background: #E2E1DE;
+	font: 100% Georgia,serif;
+	}
+h1 {
+	font: 80px/1.2em Georgia,serif;
+	text-align:center;
+}
+h2 	{	
+	font: 40px/1.2em Georgia,serif;
+	padding: 20px;
+	}
+h3 	{
+	font: .9em Georgia, "Times New Roman", Times, serif;
+	text-transform: uppercase;
+	}
+.content	{
+	font: 1em/1.35em Georgia, "Times New Roman", Times, serif;
+	padding-right: 40px;
+	padding-left: 5px;
+	}
+ol.content, ul.content	{
+	padding-left: 45px;
+	}
+ol.content li, ul.content li 	{
+	padding: 4px 0px;
+	}
+a	{
+	color: #777777;
+	text-decoration: none;
+	}
+a:hover	{
+	color: #000000;
+	background-color: #FFFC00;
+	}
+a:visited	{
+	color: #777777;
+	}
+br.clear	{
+	clear: both;
+	}
+h1 a, a h1, h2 a, a h2, h3 a, a h3 {
+	color: #000000;
+	}
+
+#header, #the_title, #content{
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+	border: 0px;
+}
+#commentbox	{	
+	float: left;
+	width: 500px;
+	margin: 0px 0px 0px 0px;
+	text-align: left;
+	}
+* html #contentContainer {
+	margin-top: 15px;
+	}
+#commentbox	{
+	font: 10pt/13pt Arial, Helvetica, sans-serif;
+	text-align: left;
+	border-bottom: 1px solid #000000; 
+	}
+#commentbox h3 {
+	font: bold 11pt Arial, Helvetica, sans-serif;
+	text-tranform: uppercase;
+	}
+		
+#footer	{
+	clear: both;
+	width: 900px;
+	margin: 20px 5px 30px 30px;
+	padding: 10px 20px 0 20px;
+	text-align: left;
+	}
+
+.selected-textbloc	{
+	background-color: #93D8FF;
+	border: 1px dashed #0097ED;
+	}
+
+.comment	{
+	margin: 1.5em 0;
+	/*border: 1px solid #00FF00;*/
+	}
+.commentDate	{
+	font: 7pt/14pt Arial, Verdana, Helvetica, sans-serif;
+	color: #666666;
+	text-transform: uppercase;
+	/*border: 1px solid #0000FF;*/
+	}
+.commentAuthor	{
+	font-weight: bold;
+	margin: .5em 0px;
+	}
+a.commentToText	{
+	display: block;
+	float: right;
+	margin-right: 0px;
+	}
+a.commentToText img {
+	border: none;
+	}
+
+#footer	{
+	border-top: 1px solid #000000;
+	font: 8pt Arial, Helvetica, sans-serif;
+	}
+	
+#footer a	{}
+#footer a:hover	{}
+#footer a:visited	{}
+
+
+/* Home Page Styles */
+#navigation 	{
+	float: left;
+	font-size: 13pt;
+	line-height: 18pt;
+	}
+#navigation h3	{
+	margin: 0px;
+	padding: 0px 0px 10px 0px;
+	}
+#navigation a	{
+	color: #000000;
+	}
+.previews	{
+
+	}
+.previews h3	{
+	font: bold 10pt Arial, Helvetica, sans-serif;
+	padding-left: 5px;
+	}
+.previews p	{
+	font: 10pt Arial, Helvetica, sans-serif;
+	}
+	
+
+
+
+.selected-textblock	{
+	color: #000000;
+	background-color: #FFFC00;
+}
+
+
+
+
+
+#paper-1, #paper-2 {
+    background-color: #F9F9F9;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    max-height: 2024px;
+    position: absolute;
+    width: 864px;
+    height: 100%;
+    top: 20px;
+    left: 10%;
+}
+
+#paper-2 {
+    -moz-transform: rotate(2deg);
+    margin-left: 5px;
+    z-index: -1;
+}
+
+
+#paper-1 {
+    -moz-transform: rotate(-3deg);
+    margin-left: -10px;
+    z-index: -2;
+}
+
+
+.textblock {
+    border: 1px solid #F3F3F3;
+    min-height: 100px;
+    padding: 10px;
+    position: relative;
+}
+
+.selected-textblock {
+    background-color: #F3F3F3;
+    color: #000000;
+}
+
+#commentbox {
+    font: 100% Georgia,Serif;
+    text-align: left;
+}
+
+.paragraph-block {
+    border: 1px solid #EEEEEE;
+    padding: 12px 15px;
+}
+
+.commenticonbox {
+    background-color: #DDDDDD;
+    border-color: transparent;
+    border-radius: 5px 5px 5px 5px;
+    border-style: solid;
+    border-width: 1px 1px 1px 0;
+    box-shadow: 1px 1px 1px #CCCCCC;
+    color: white;
+    margin: 0;
+    position: absolute;
+    right: -30px;
+    text-align: center;
+    top: -1px;
+    width: 16px;
+}
+
+.navigation-previous {
+    float: left;
+    font-size: 75%;
+    margin-bottom: 10px;
+}
+
+.previews p{
+	font: 100% Georgia,serif;
+}
+
+#menu-primary {
+    float: right;
+    margin: 0 5px 10px;
+}

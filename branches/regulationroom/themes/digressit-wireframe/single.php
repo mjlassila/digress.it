@@ -10,7 +10,7 @@
 	if($digressit_options['digressit_enabled_for_posts']):
 		digressit_get_stylized_title(); 
 	?>
-	<div id="content" class="<?php echo $current_type; ?>" role="main">	
+	<div id="content" role="main">	
 
 		<div <?php if(function_exists('post_class')){ post_class(); } ?> id="post-<?php the_ID(); ?>">
 			<div class="entry" role="article">

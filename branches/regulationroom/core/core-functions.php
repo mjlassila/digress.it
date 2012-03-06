@@ -1322,10 +1322,7 @@ var digressit_enabled = 0;
 <?php } ?>
 var keyboard_navigation = <?php echo $digressit_options['keyboard_navigation'] ?>;
 </script>
-    <script type="text/javascript">
-     var oneall_js_protocol = (("https:" == document.location.protocol) ? "https" : "http");
-     document.write(unescape("%3Cscript src='" + oneall_js_protocol + "://regroom.api.oneall.com/socialize/library.js' type='text/javascript'%3E%3C/script%3E"));
-    </script>
+
 		<?php
 		
 		if($digressit_options['debug_mode'] == 1){
@@ -1342,6 +1339,12 @@ var keyboard_navigation = <?php echo $digressit_options['keyboard_navigation'] ?
             wp_enqueue_script('digressit.externals', get_digressit_media_uri('js/digressit.externals.min.js'), 'jquery', false, true );			
 		}
 	}
+    ?>
+<script type="text/javascript">
+    var oneall_js_protocol = (("https:" == document.location.protocol) ? "https" : "http");
+    document.write(unescape("%3Cscript src='" + oneall_js_protocol + "://regroom.api.oneall.com/socialize/library.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<?php
 }
 
 ?>

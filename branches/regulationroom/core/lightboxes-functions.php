@@ -82,16 +82,6 @@ function lightbox_login_ajax(){
                     <?php do_action('social_functions_signin'); ?>
                 <?php endif; ?>
 
-                <!-- The plugin will be embedded into this div //-->
-                <div id="social_login_container"></div>
-
-                <script type="text/javascript">
-                 oneall.api.plugins.social_login.build("social_login_container", {
-                  'providers' :  ['facebook', 'google', 'twitter', 'yahoo', 'wordpress'],
-                  'callback_uri': 'http://regulationroom.local/'
-                 });
-                </script>
-                
                 <p>
                     <label for="user_login"><?php _e('Username'); ?></label><br />
                     <input type="text" name="log" id="user_login" class="input required" value="" size="25" />

@@ -136,7 +136,7 @@ function lightbox_login_success_ajax(){
         <div class="lightbox-content center" id="lightbox-login-success" data-focus-on-close=".signin-signout-link">
             <h3 tabindex="0"><?php _e('Sign In Successful'); ?></h3>
             
-            <?php echo apply_filters('digressit_lightbox_close_mechanism') ?>  
+            <?php echo apply_filters('digressit_lightbox_close_mechanism', '') ?>  
             
         </div><?php 
     else:

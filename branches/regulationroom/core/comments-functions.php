@@ -241,7 +241,7 @@ function standard_digressit_comment_parser($comment, $args, $depth) {
  *  This is how the comment form will look
  */
 function digressit_comment_form(){
-    global $blog_id;
+    global $blog_id, $post;
     
     // This gets the value from the blog-specific options table (e.g., wp_6_options)
     $admin_email = get_option('admin_email');

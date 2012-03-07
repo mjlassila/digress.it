@@ -22,7 +22,7 @@ function start_lightbox($lightbox_name = 'Lightbox: Generic'){
     echo '<span class="hidden-offscreen"> Beginning of dialog content </span>';
 }
 
-function end_lightbox($status = 1){
+function end_lightbox($status = 1, $lightbox_name = 'Lighbox: Generic'){
     //This is for accessibility support
     echo '<span class="hidden-offscreen"> End of dialog content </span>';
     do_action('digressit_end_lightbox', $lightbox_name);

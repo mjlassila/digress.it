@@ -41,10 +41,6 @@ function ajax_template() {
 		$request_action = basename(trim(str_replace('-','_',esc_attr($wp->query_vars['inc_ajax']))."_ajax")); 
 		$request_params = $_REQUEST;
 
-		$comment_id = $request_params['comment_id'];
-		$status = null;
-		$message = null;
-
 		status_header( 200 );	
 		header('Cache-Control: no-cache, must-revalidate');
 		header('Expires: Mon, 26 Jul 1997 05:00:00 GMT');

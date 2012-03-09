@@ -1,9 +1,15 @@
 <?php
 /*
-Template Name: Blank
+Template Name: Blank With Logo
 */
 ?>
-
+<?php
+/*
+ * add head and open body, etc. in the middle put the page content
+ * if can't do it this way, make the template an Exit Survey template
+ * and call the exit survey function. 
+ */
+?>
 <!DOCTYPE HTML>
 <?php global $blog_id, $current_user, $current_page_name, $digressit_options; ?>
 <html <?php language_attributes(); ?>>
@@ -21,6 +27,10 @@ wp_head();
 
 <body>
 
+<?php 
+do_action('add_header_image');
+?>
+<div style="clear:both;"></div>
 <?php
 while ( have_posts() ) {
     the_post(); 

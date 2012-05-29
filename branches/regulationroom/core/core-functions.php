@@ -401,15 +401,13 @@ function digressit_is_mainpage(){
 	if(is_multisite() && file_exists(get_template_directory(). '/frontpage.php')){
 		if(is_home() || is_front_page()){
 			if($blog_id == 1):			
-				return false;
+				return 0;
 			else:
-				return true;
+				return $blog_id;
 			endif;
 		}
 	}
-	else{
-		return false;
-	}
+	return 0;
 }
 
 /* @TODO : do subdomains as well */

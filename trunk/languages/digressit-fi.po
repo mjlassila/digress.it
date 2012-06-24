@@ -1,0 +1,1453 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Digress.it\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-06-17 11:26+0300\n"
+"PO-Revision-Date: 2012-06-21 23:44+0200\n"
+"Last-Translator: Matti Lassila <matti@sange.fi>\n"
+"Language-Team: Finnish <matti@sange.fi>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Finnish\n"
+"X-Poedit-Country: FINLAND\n"
+
+#: core/admin-functions.php:27
+msgid "Warning: These posts wont"
+msgstr "Varoitus: Nämä kirjoitukset eivät"
+
+#: core/admin-functions.php:39
+msgid "Warning: There are comments attached to the structure of this page. Changing the structure of this post will break the alignment of comments to their paragraphs"
+msgstr "Varoitus: Sivuun liittyy kommentteja. Kirjoituksen rakenteen muuttaminen rikkoo kommenttien ja kappaleiden välisen yhteyden."
+
+#: core/admin-functions.php:60
+msgid "Warning: Digress.it requires permalinks to be enabled. Please go to <a href='"
+msgstr "Varoitus: Digress.it vaatii pysyväis"
+
+#: core/admin-functions.php:60
+msgid "Permalink Settings</a> and make sure that <b>Default</b> is not selected"
+msgstr ""
+
+#: core/admin-functions.php:122
+msgid "Digress.it Options"
+msgstr "Digress.it -asetukset"
+
+#: core/admin-functions.php:133
+msgid "Presentation"
+msgstr ""
+
+#: core/admin-functions.php:139
+msgid "Enable Digress.it"
+msgstr "Ota Digress.it käyttöön"
+
+#: core/admin-functions.php:146
+#: core/admin-functions.php:191
+msgid "The content of this page will be the first thing a visitor to your website will see."
+msgstr "Sisältö joka näytetään ensimmäisenä."
+
+#: core/admin-functions.php:153
+msgid "Front Page Menu"
+msgstr "Etusivulle julkaisu"
+
+#: core/admin-functions.php:169
+msgid "Front Page Order"
+msgstr "Etusivun järjestys"
+
+#: core/admin-functions.php:175
+msgid "Front Page Order by"
+msgstr "Järjestyksen suunta"
+
+#: core/admin-functions.php:185
+msgid "Front page content"
+msgstr "Etusivun sisältö"
+
+#: core/admin-functions.php:196
+msgid "Table of Contents Label"
+msgstr "Sisällysluettelon otsikko"
+
+#: core/admin-functions.php:205
+msgid "Comments by Section Label"
+msgstr "Otsikko osion mukaan listatuille kommenteille"
+
+#: core/admin-functions.php:213
+msgid "Comments by Users Label"
+msgstr "Otsikko käyttäjän mukaan listatuille kommenteille"
+
+#: core/admin-functions.php:222
+msgid "General Comments Label"
+msgstr "Yleiskommenttien otsikko"
+
+#: core/admin-functions.php:231
+msgid "Keyboard Navigation"
+msgstr "Näppäinnavigointi"
+
+#: core/admin-functions.php:240
+msgid "Enable Citation Button"
+msgstr "Ota saavutettavuusmoodi käyttöön"
+
+#: core/admin-functions.php:249
+msgid "Enable Comment Tagging"
+msgstr "%s kommentti odottamassa tarkistusta."
+
+#: core/admin-functions.php:258
+msgid "BuddyPress Support"
+msgstr "Tukifoorumit"
+
+#: core/admin-functions.php:267
+msgid "Frontpage List Style"
+msgstr "Etusivun listan tyyli"
+
+#: core/admin-functions.php:269
+msgid "None"
+msgstr "Ei mitään"
+
+#: core/admin-functions.php:270
+msgid "Lower Alphabet"
+msgstr "pienet kirjaimet"
+
+#: core/admin-functions.php:271
+msgid "Upper Alphabet"
+msgstr "Isot kirjaimet"
+
+#: core/admin-functions.php:272
+msgid "Lower Roman"
+msgstr "Pienet roomalaiset numerot"
+
+#: core/admin-functions.php:273
+msgid "Upper Roman"
+msgstr "Isot roomalaiset numerot"
+
+#: core/admin-functions.php:274
+msgid "Square"
+msgstr "neliö"
+
+#: core/admin-functions.php:275
+msgid "Circle"
+msgstr "ympyrä"
+
+#: core/admin-functions.php:284
+msgid "Allow General Comments"
+msgstr "Salli yleiskommentit"
+
+#: core/admin-functions.php:292
+msgid "Enable Instant Content Search"
+msgstr "Ota käyttöön sisällön pikahaku"
+
+#: core/admin-functions.php:300
+msgid "Parse List Items"
+msgstr "Navigaatiovalikon kohdat"
+
+#: core/admin-functions.php:309
+msgid "Show Pages in Menu"
+msgstr "Näytä sivut valikossa"
+
+#: core/admin-functions.php:317
+msgid "Enable Drop Down Menu"
+msgstr "Ota pudotusvalikko käyttöön"
+
+#: core/admin-functions.php:323
+msgid "Enable Sidebar"
+msgstr "Ota sivupalkki käyttöön"
+
+#: core/admin-functions.php:329
+msgid "Sidebar Position"
+msgstr "Sivupalkin sijainti"
+
+#: core/admin-functions.php:335
+msgid "Auto-hide Sidebar"
+msgstr "Piilota sivupalkki automaattisesti"
+
+#: core/admin-functions.php:340
+msgid "In Sidebar Show"
+msgstr "Näytä sivupalkissa"
+
+#: core/admin-functions.php:346
+msgid "Custom Header Image URL"
+msgstr "Otsakekuvan osoite"
+
+#: core/admin-functions.php:353
+msgid ""
+"This image will override the current header and will become the logo to your site. \n"
+"                    Be sure to get copy the entire URL in this field. You can also \n"
+"                    <a href=\""
+msgstr ""
+
+#: core/admin-functions.php:362
+msgid "Custom Style Sheet"
+msgstr "Muokkaa CSS-tyyliä"
+
+#: core/admin-functions.php:367
+msgid ""
+"If you would like to customize the theme, you can upload a stylesheet that can be be loaded after the required stylesheets. \n"
+"                    For heavy customizations you should use the \"Digress.it Wireframe\" theme provided.\n"
+"                    For more information on this feature follow the instructions provided at"
+msgstr ""
+
+#: core/admin-functions.php:374
+msgid "Advanced"
+msgstr "Edistyneet ominaisuudet"
+
+#: core/admin-functions.php:381
+msgid "Debug Mode"
+msgstr "Debuggaustila"
+
+#: core/admin-functions.php:389
+msgid "Content Parsing Function"
+msgstr "Käsittelyfunktio sisällölle"
+
+#: core/admin-functions.php:396
+msgid "Separator Tag"
+msgstr "%1$s %2$s %3$s avainsanan RSS-syöte"
+
+#: core/admin-functions.php:404
+msgid "Comments Parsing Function"
+msgstr "Käsittelyfunktio  kommenteille"
+
+#: core/admin-functions.php:410
+msgid "Comment Box Parsing Function"
+msgstr "Kommenttien käsittelyfunktio"
+
+#: core/admin-functions.php:421
+#: themes/digressit-wireframe/groups/single/admin.php:32
+#: themes/digressit-wireframe/groups/single/admin.php:100
+#: themes/digressit-wireframe/groups/single/forum/edit.php:32
+#: themes/digressit-wireframe/groups/single/forum/edit.php:50
+#: themes/digressit-wireframe/members/single/profile/edit.php:114
+msgid "Save Changes"
+msgstr "Tallenna muutokset"
+
+#: core/admin-functions.php:422
+msgid "Reset Options"
+msgstr "Palauta oletusasetukset"
+
+#: core/comments-functions.php:277
+msgid "Click here to add a new comment..."
+msgstr ""
+
+#: core/comments-functions.php:286
+msgid "Submit Comment"
+msgstr "Lähetä kommentti"
+
+#: core/comments-functions.php:696
+#: themes/digressit-wireframe/mainpage.php:26
+msgid "There are "
+msgstr "Oletko eksyksissä?"
+
+#: core/comments-functions.php:696
+msgid " comments in this document"
+msgstr "Tallenna siirretyt tiedostot tähän kansioon:"
+
+#: core/core-functions.php:224
+msgid "This replaces the menu that appears on the main page"
+msgstr ""
+
+#: core/core-functions.php:225
+msgid "This replaces the menu runs across the top of the page"
+msgstr ""
+
+#: core/core-functions.php:226
+msgid "This replaces the menu that loads in the sidebar"
+msgstr ""
+
+#: core/core-functions.php:979
+msgid "Server failed to respond. Please try again later"
+msgstr "Palvelin ei vastaa. Yritä myöhemmin uudelleen."
+
+#: core/lightboxes-functions.php:67
+msgid "<p tabindex=\"1\"><strong>ERROR</strong>: <a href=\"#user_login\" class=\"clickfocus user_login\">Enter a username and password. Try again.</a></p>"
+msgstr ""
+
+#: core/lightboxes-functions.php:71
+msgid "<p tabindex=\"1\"><strong>ERROR</strong>: <a href=\"#user_login\" class=\"clickfocus user_login\">Not a valid account. Try again.</a>"
+msgstr ""
+
+#: core/lightboxes-functions.php:75
+msgid "<p tabindex=\"1\"><strong>ERROR</strong>: <a href=\"#user_login\" class=\"clickfocus user_login\">Authentication failed. Try again.</a></p>"
+msgstr ""
+
+#: core/lightboxes-functions.php:79
+msgid "<p tabindex=\"1\"><strong>ERROR</strong>: Your account has not been enabled. Please check your inbox for your activation code.</p>"
+msgstr ""
+
+#: core/lightboxes-functions.php:83
+msgid "<p tabindex=\"1\"><strong>ERROR</strong>: Your password was reset.<br>Check your email for your new password.</p>"
+msgstr ""
+
+#: core/lightboxes-functions.php:96
+#: themes/digressit-wireframe/registration/register.php:35
+msgid "Username"
+msgstr "Käyttäjänimi"
+
+#: core/lightboxes-functions.php:101
+msgid "Password"
+msgstr "Salasana"
+
+#: core/lightboxes-functions.php:109
+msgid "Create an account if you are a new user"
+msgstr ""
+
+#: core/lightboxes-functions.php:109
+msgid "Create an account"
+msgstr "Luo käyttäjätili"
+
+#: core/lightboxes-functions.php:110
+msgid "Reset your password if you have lost it"
+msgstr ""
+
+#: core/lightboxes-functions.php:110
+msgid "Lost Password?"
+msgstr "Salasana hukassa?"
+
+#: core/lightboxes-functions.php:123
+msgid "Sign in"
+msgstr "Kirjaudu sisään"
+
+#: core/lightboxes-functions.php:147
+msgid "Sign In Successful"
+msgstr "Virhe poistamisessa."
+
+#: core/widgets-functions.php:146
+msgid "Comment Browser"
+msgstr "%s kommentti hyväksytty"
+
+#: core/widgets-functions.php:184
+#: themes/digressit-wireframe/search-template.php:14
+#: themes/digressit-wireframe/search-template.php:15
+#: themes/digressit-wireframe/searchform.php:10
+msgid "Search"
+msgstr "Etsi"
+
+#: core/widgets-functions.php:342
+#: themes/digressit-wireframe/forums/index.php:28
+#: themes/digressit-wireframe/groups/single/forum/edit.php:24
+#: themes/digressit-wireframe/groups/single/forum.php:31
+msgid "Title:"
+msgstr "Otsikko:"
+
+#: core/widgets-functions.php:347
+msgid "Categorize?"
+msgstr ""
+
+#: extensions/feeds/paragraph-comments-feed.php:20
+#: extensions/feeds/user-comments-feed.php:35
+msgid "Comments on: %s"
+msgstr "Artikkelin %s kommentit"
+
+#: extensions/feeds/paragraph-comments-feed.php:22
+#: extensions/feeds/user-comments-feed.php:37
+msgid "Comments for %s searching on %s"
+msgstr "Sivuston %s kommentit, hakusana: %s"
+
+#: extensions/feeds/paragraph-comments-feed.php:24
+#: extensions/feeds/user-comments-feed.php:39
+msgid "Comments for %s"
+msgstr "Sivuston %s kommentit"
+
+#: extensions/feeds/paragraph-comments-feed.php:62
+#: extensions/feeds/user-comments-feed.php:57
+#: themes/digressit-wireframe/author-feed.php:48
+msgid "Comment on %1$s by %2$s"
+msgstr "%2$s on kommentoinut artikkelia %1$s"
+
+#: themes/digressit-wireframe/404.php:19
+msgid "404 - The Server can not find it!"
+msgstr ""
+
+#: themes/digressit-wireframe/404.php:21
+msgid "The post or the page that you are looking for, is not available at this time. It could have been moved / deleted."
+msgstr ""
+
+#: themes/digressit-wireframe/404.php:22
+msgid "Please browse through the archives / search through the site."
+msgstr ""
+
+#: themes/digressit-wireframe/activity/activity-loop.php:35
+msgid "Load More"
+msgstr "Lataa lisää"
+
+#: themes/digressit-wireframe/activity/activity-loop.php:45
+msgid "Sorry, there was no activity found. Please try a different filter."
+msgstr ""
+
+#: themes/digressit-wireframe/activity/entry.php:36
+msgid "Reply"
+msgstr "Vastaa"
+
+#: themes/digressit-wireframe/activity/entry.php:41
+msgid "Mark as Favorite"
+msgstr "Merkitse suosikiksi"
+
+#: themes/digressit-wireframe/activity/entry.php:41
+msgid "Favorite"
+msgstr "Suosikki"
+
+#: themes/digressit-wireframe/activity/entry.php:43
+msgid "Remove Favorite"
+msgstr "Poista suosikki"
+
+#: themes/digressit-wireframe/activity/entry.php:53
+msgid "In reply to"
+msgstr "Vastauksena"
+
+#: themes/digressit-wireframe/activity/entry.php:54
+msgid "View Thread / Permalink"
+msgstr "Näytä viestiketju / Pysyvä linkki"
+
+#: themes/digressit-wireframe/activity/entry.php:54
+msgid "View"
+msgstr "Näytä"
+
+#: themes/digressit-wireframe/activity/entry.php:71
+msgid "Post"
+msgstr "artikkeli"
+
+#: themes/digressit-wireframe/activity/entry.php:71
+msgid "or press esc to cancel."
+msgstr "tai peruuta painamalla ESC."
+
+#: themes/digressit-wireframe/activity/index.php:15
+msgid "Site Activity"
+msgstr "Sivuston tapahtumat"
+
+#: themes/digressit-wireframe/activity/index.php:30
+msgid "The public activity for everyone on this site."
+msgstr "Sivun käyttäjien julkiset tapahtumat."
+
+#: themes/digressit-wireframe/activity/index.php:30
+#: themes/digressit-wireframe/members/index.php:25
+msgid "All Members (%s)"
+msgstr "Kaikki käyttäjät (%s)"
+
+#: themes/digressit-wireframe/activity/index.php:38
+msgid "The activity of my friends only."
+msgstr "Vain verkostooni kuuluvien käyttäjien tapahtumat."
+
+#: themes/digressit-wireframe/activity/index.php:38
+#: themes/digressit-wireframe/members/index.php:28
+msgid "My Friends (%s)"
+msgstr "Kontaktit (%s("
+
+#: themes/digressit-wireframe/activity/index.php:46
+msgid "The activity of groups I am a member of."
+msgstr "Omien ryhmien tapahtumat."
+
+#: themes/digressit-wireframe/activity/index.php:46
+#: themes/digressit-wireframe/groups/index.php:20
+msgid "My Groups (%s)"
+msgstr "Ryhmät (%s)"
+
+#: themes/digressit-wireframe/activity/index.php:53
+msgid "The activity I've marked as a favorite."
+msgstr "Tapahtuma joka on merkitty suosikiksi."
+
+#: themes/digressit-wireframe/activity/index.php:53
+msgid "My Favorites (<span>%s</span>)"
+msgstr "Suosikit (<span>%s</span>)"
+
+#: themes/digressit-wireframe/activity/index.php:58
+msgid "Activity that I have been mentioned in."
+msgstr ""
+
+#: themes/digressit-wireframe/activity/index.php:58
+#, php-format
+msgid "@%s Mentions"
+msgstr ""
+
+#: themes/digressit-wireframe/activity/index.php:58
+msgid "(%s new)"
+msgstr "(uusia %s)"
+
+#: themes/digressit-wireframe/activity/index.php:68
+#: themes/digressit-wireframe/groups/single/activity.php:3
+msgid "RSS"
+msgstr "RSS"
+
+#: themes/digressit-wireframe/activity/index.php:74
+#: themes/digressit-wireframe/groups/single/activity.php:9
+#: themes/digressit-wireframe/members/single/activity.php:14
+msgid "No Filter"
+msgstr "Ei suodatusta"
+
+#: themes/digressit-wireframe/activity/index.php:75
+#: themes/digressit-wireframe/groups/single/activity.php:10
+#: themes/digressit-wireframe/members/single/activity.php:15
+msgid "Show Updates"
+msgstr "Näytä päivitykset"
+
+#: themes/digressit-wireframe/activity/index.php:76
+#: themes/digressit-wireframe/members/single/activity.php:18
+msgid "Show Blog Posts"
+msgstr "Näytä blogiartikkelit"
+
+#: themes/digressit-wireframe/activity/index.php:77
+#: themes/digressit-wireframe/members/single/activity.php:19
+msgid "Show Blog Comments"
+msgstr "Näytä blogikommentit"
+
+#: themes/digressit-wireframe/activity/index.php:80
+#: themes/digressit-wireframe/groups/single/activity.php:13
+#: themes/digressit-wireframe/members/single/activity.php:27
+msgid "Show New Forum Topics"
+msgstr ""
+
+#: themes/digressit-wireframe/activity/index.php:81
+#: themes/digressit-wireframe/groups/single/activity.php:14
+#: themes/digressit-wireframe/members/single/activity.php:28
+msgid "Show Forum Replies"
+msgstr "Näytä foorumikeskustelujen vastaukset"
+
+#: themes/digressit-wireframe/activity/index.php:85
+#: themes/digressit-wireframe/members/single/activity.php:32
+msgid "Show New Groups"
+msgstr "Näytä uudet ryhmät"
+
+#: themes/digressit-wireframe/activity/index.php:86
+#: themes/digressit-wireframe/groups/single/activity.php:17
+#: themes/digressit-wireframe/members/single/activity.php:33
+msgid "Show New Group Memberships"
+msgstr ""
+
+#: themes/digressit-wireframe/activity/index.php:90
+#: themes/digressit-wireframe/members/single/activity.php:22
+msgid "Show Friendship Connections"
+msgstr "Näytä kontaktit"
+
+#: themes/digressit-wireframe/activity/index.php:93
+msgid "Show New Members"
+msgstr "Näytä uudet"
+
+#: themes/digressit-wireframe/activity/post-form.php:14
+#, php-format
+msgid "You are mentioning %s in a new update, this user will be sent a notification of your message."
+msgstr ""
+
+#: themes/digressit-wireframe/activity/post-form.php:26
+msgid "What's new in %s, %s?"
+msgstr "Uudet ominaisuudet"
+
+#: themes/digressit-wireframe/activity/post-form.php:28
+msgid "What's new %s?"
+msgstr "Uudet ominaisuudet"
+
+#: themes/digressit-wireframe/activity/post-form.php:40
+msgid "Post Update"
+msgstr "Muutosloki päivityksen jälkeen"
+
+#: themes/digressit-wireframe/activity/post-form.php:45
+msgid "Post in"
+msgstr "Kirjoitus ryhmäkeskustelussa: "
+
+#: themes/digressit-wireframe/activity/post-form.php:48
+msgid "My Profile"
+msgstr "Oma profiili"
+
+#: themes/digressit-wireframe/author.php:62
+msgid "No posts by this author."
+msgstr "Ei kirjoituksia tältä kirjoittajalta."
+
+#: themes/digressit-wireframe/blogs/blogs-loop.php:43
+msgid "Visit Blog"
+msgstr "WordPress-uutisia (suomi)"
+
+#: themes/digressit-wireframe/blogs/blogs-loop.php:66
+msgid "Sorry, there were no blogs found."
+msgstr ""
+
+#: themes/digressit-wireframe/blogs/create.php:17
+#: themes/digressit-wireframe/blogs/index.php:8
+msgid "Create a Blog"
+msgstr "Luo blogi"
+
+#: themes/digressit-wireframe/blogs/create.php:17
+#: themes/digressit-wireframe/blogs/index.php:8
+msgid "Blogs Directory"
+msgstr "Blogihakemisto"
+
+#: themes/digressit-wireframe/blogs/create.php:28
+msgid "Blog registration is currently disabled"
+msgstr "Blogien perustamista ei tällä hetkellä sallita."
+
+#: themes/digressit-wireframe/blogs/index.php:18
+msgid "All Blogs (%s)"
+msgstr "Kaikki blogit (%s)"
+
+#: themes/digressit-wireframe/blogs/index.php:21
+msgid "My Blogs (%s)"
+msgstr "Omat blogit (%s)"
+
+#: themes/digressit-wireframe/blogs/index.php:28
+#: themes/digressit-wireframe/forums/index.php:82
+#: themes/digressit-wireframe/groups/index.php:27
+#: themes/digressit-wireframe/members/index.php:35
+#: themes/digressit-wireframe/members/single/blogs.php:13
+#: themes/digressit-wireframe/members/single/friends.php:9
+#: themes/digressit-wireframe/members/single/groups.php:10
+msgid "Order By:"
+msgstr "Järjestä:"
+
+#: themes/digressit-wireframe/blogs/index.php:30
+#: themes/digressit-wireframe/forums/index.php:84
+#: themes/digressit-wireframe/groups/index.php:29
+#: themes/digressit-wireframe/members/index.php:37
+#: themes/digressit-wireframe/members/single/blogs.php:15
+#: themes/digressit-wireframe/members/single/friends.php:11
+#: themes/digressit-wireframe/members/single/groups.php:12
+msgid "Last Active"
+msgstr "Viimeksi aktiivinen"
+
+#: themes/digressit-wireframe/blogs/index.php:31
+#: themes/digressit-wireframe/members/single/blogs.php:16
+msgid "Newest"
+msgstr "Uusimmat"
+
+#: themes/digressit-wireframe/blogs/index.php:32
+#: themes/digressit-wireframe/groups/index.php:32
+#: themes/digressit-wireframe/members/index.php:41
+#: themes/digressit-wireframe/members/single/blogs.php:17
+#: themes/digressit-wireframe/members/single/friends.php:13
+#: themes/digressit-wireframe/members/single/groups.php:15
+msgid "Alphabetical"
+msgstr "Aakkosellinen"
+
+#: themes/digressit-wireframe/comments-browser.php:52
+msgid "Go to thread"
+msgstr "Siirry viestiketjuun"
+
+#: themes/digressit-wireframe/comments-browser.php:60
+msgid "This comment is awaiting moderation."
+msgstr "Kommenttisi odottaa hyväksyntää."
+
+#: themes/digressit-wireframe/comments-browser.php:77
+msgid "No comments"
+msgstr "Ei kommentteja"
+
+#: themes/digressit-wireframe/comments-browser.php:80
+msgid "This page contains a running transcript of all conversations taking place in "
+msgstr ""
+
+#: themes/digressit-wireframe/comments.php:13
+msgid "This post is password protected. Enter the password to view comments."
+msgstr "Artikkeli on salasanasuojattu. Syötä salasana katsoaksesi kommentteja."
+
+#: themes/digressit-wireframe/comments.php:49
+msgid "You must be logged in to write a comment."
+msgstr "Kommentointi on sallittu vain sisäänkirjautumisen jälkeen."
+
+#: themes/digressit-wireframe/comments.php:59
+msgid "Sign In"
+msgstr "Kirjaudu sisään"
+
+#: themes/digressit-wireframe/comments.php:60
+msgid "Create Account"
+msgstr "Luo käyttäjätili"
+
+#: themes/digressit-wireframe/comments.php:73
+msgid "This discussion is now closed."
+msgstr "Keskustelu on suljettu."
+
+#: themes/digressit-wireframe/comments.php:81
+msgid "show all"
+msgstr "näyt kaikki"
+
+#: themes/digressit-wireframe/comments.php:82
+msgid "There are no comments. Click the text to your left to make a new comment."
+msgstr ""
+
+#: themes/digressit-wireframe/footer.php:13
+msgid "Powered by "
+msgstr "Moottorina WordPress"
+
+#: themes/digressit-wireframe/forums/forums-loop.php:7
+#: themes/digressit-wireframe/forums/index.php:9
+msgid "New Topic"
+msgstr "Uusi viestiketju"
+
+#: themes/digressit-wireframe/forums/forums-loop.php:24
+msgid "Topic Title"
+msgstr "Aiheen otsikko"
+
+#: themes/digressit-wireframe/forums/forums-loop.php:25
+msgid "Latest Poster"
+msgstr "Viimeisin kirjoittaja"
+
+#: themes/digressit-wireframe/forums/forums-loop.php:28
+msgid "Posted In Group"
+msgstr "Kirjoitettu ryhmässä"
+
+#: themes/digressit-wireframe/forums/forums-loop.php:31
+msgid "Posts"
+msgstr "Artikkelit"
+
+#: themes/digressit-wireframe/forums/forums-loop.php:32
+msgid "Freshness"
+msgstr "Uutuus"
+
+#: themes/digressit-wireframe/forums/forums-loop.php:39
+msgid "Permalink"
+msgstr "Kestolinkki:"
+
+#: themes/digressit-wireframe/forums/forums-loop.php:76
+msgid "Sorry, there were no forum topics found."
+msgstr ""
+
+#: themes/digressit-wireframe/forums/index.php:9
+msgid "Group Forums Directory"
+msgstr "Ryhmäkeskustelujen hamekimsto"
+
+#: themes/digressit-wireframe/forums/index.php:26
+#: themes/digressit-wireframe/groups/single/forum.php:29
+msgid "Post a New Topic:"
+msgstr "Lisää uusi artikkeli:"
+
+#: themes/digressit-wireframe/forums/index.php:31
+#: themes/digressit-wireframe/groups/single/forum/edit.php:27
+#: themes/digressit-wireframe/groups/single/forum.php:34
+msgid "Content:"
+msgstr "Sisältö:"
+
+#: themes/digressit-wireframe/forums/index.php:34
+#: themes/digressit-wireframe/groups/single/forum.php:37
+msgid "Tags (comma separated):"
+msgstr "Avainsanat (erotettuna pilkulla):"
+
+#: themes/digressit-wireframe/forums/index.php:37
+msgid "Post In Group Forum:"
+msgstr "Kirjoitus ryhmäkeskustelussa: "
+
+#: themes/digressit-wireframe/forums/index.php:49
+#: themes/digressit-wireframe/groups/single/forum.php:43
+msgid "Post Topic"
+msgstr "Lähetä viesti"
+
+#: themes/digressit-wireframe/forums/index.php:50
+msgid "Cancel"
+msgstr "Peruuta"
+
+#: themes/digressit-wireframe/forums/index.php:60
+#, php-format
+msgid "You are not a member of any groups so you don't have any group forums you can post in. To start posting, first find a group that matches the topic subject you'd like to start. If this group does not exist, why not <a href='%s'>create a new group</a>? Once you have joined or created the group you can post your topic in that group's forum."
+msgstr ""
+
+#: themes/digressit-wireframe/forums/index.php:72
+msgid "All Topics (%s)"
+msgstr "Kaikki aiheet (%s)"
+
+#: themes/digressit-wireframe/forums/index.php:75
+msgid "My Topics (%s)"
+msgstr "Omat aiheeni(%s)"
+
+#: themes/digressit-wireframe/forums/index.php:85
+msgid "Most Posts"
+msgstr "Kaikki artikkelit"
+
+#: themes/digressit-wireframe/forums/index.php:86
+msgid "Unreplied"
+msgstr "Ei vastattu"
+
+#: themes/digressit-wireframe/frontpage.php:24
+msgid "Congratulations on installing the Multisite edition of Digress.it"
+msgstr "Olet nyt asentanut Digress.it -lisäosan monisivustoversion."
+
+#: themes/digressit-wireframe/frontpage.php:26
+msgid "This is the frontpage to your Multi-site community."
+msgstr "Tämä on monisivuston etusivu."
+
+#: themes/digressit-wireframe/frontpage.php:27
+msgid "To edit this page you can take one of the following actions:"
+msgstr "Vaihtoehdot sivun muokkaamiseen:"
+
+#: themes/digressit-wireframe/groups/create.php:7
+#: themes/digressit-wireframe/groups/index.php:7
+msgid "Create a Group"
+msgstr "Luo ryhmä"
+
+#: themes/digressit-wireframe/groups/create.php:7
+#: themes/digressit-wireframe/groups/index.php:7
+msgid "Groups Directory"
+msgstr "Ryhmähakemisto"
+
+#: themes/digressit-wireframe/groups/create.php:26
+msgid "* Group Name"
+msgstr "* Ryhmän nimi"
+
+#: themes/digressit-wireframe/groups/create.php:26
+#: themes/digressit-wireframe/groups/create.php:29
+#: themes/digressit-wireframe/members/single/profile/edit.php:30
+#: themes/digressit-wireframe/members/single/profile/edit.php:37
+#: themes/digressit-wireframe/members/single/profile/edit.php:44
+#: themes/digressit-wireframe/members/single/profile/edit.php:53
+#: themes/digressit-wireframe/members/single/profile/edit.php:63
+#: themes/digressit-wireframe/members/single/profile/edit.php:77
+#: themes/digressit-wireframe/members/single/profile/edit.php:87
+#: themes/digressit-wireframe/registration/register.php:35
+#: themes/digressit-wireframe/registration/register.php:39
+#: themes/digressit-wireframe/registration/register.php:43
+#: themes/digressit-wireframe/registration/register.php:47
+#: themes/digressit-wireframe/registration/register.php:74
+#: themes/digressit-wireframe/registration/register.php:82
+#: themes/digressit-wireframe/registration/register.php:90
+#: themes/digressit-wireframe/registration/register.php:100
+#: themes/digressit-wireframe/registration/register.php:111
+#: themes/digressit-wireframe/registration/register.php:126
+#: themes/digressit-wireframe/registration/register.php:137
+#: themes/digressit-wireframe/registration/register.php:186
+#: themes/digressit-wireframe/registration/register.php:195
+msgid "(required)"
+msgstr "(pakollinen)"
+
+#: themes/digressit-wireframe/groups/create.php:29
+msgid "* Group Description"
+msgstr "* Ryhmän kuvaus"
+
+#: themes/digressit-wireframe/groups/create.php:45
+#: themes/digressit-wireframe/groups/single/admin.php:45
+msgid "Enable comment wire"
+msgstr "%s kommentti odottamassa tarkistusta."
+
+#: themes/digressit-wireframe/groups/create.php:52
+#: themes/digressit-wireframe/groups/single/admin.php:55
+msgid "Enable discussion forum"
+msgstr "Ota ryhmäkeskustelut käyttöön"
+
+#: themes/digressit-wireframe/groups/create.php:57
+#, php-format
+msgid "<strong>Attention Site Admin:</strong> Group forums require the <a href=\"%s\">correct setup and configuration</a> of a bbPress installation."
+msgstr ""
+
+#: themes/digressit-wireframe/groups/create.php:65
+#: themes/digressit-wireframe/groups/single/admin.php:64
+msgid "Privacy Options"
+msgstr "Yksityisyysasetukset"
+
+#: themes/digressit-wireframe/groups/create.php:69
+#: themes/digressit-wireframe/groups/single/admin.php:69
+msgid "This is a public group"
+msgstr "Ryhmä on julkinen"
+
+#: themes/digressit-wireframe/groups/create.php:71
+#: themes/digressit-wireframe/groups/single/admin.php:71
+msgid "Any site member can join this group."
+msgstr "Kuka tahansa sivuston käyttäjä voi liittyä ryhmään."
+
+#: themes/digressit-wireframe/groups/create.php:72
+#: themes/digressit-wireframe/groups/create.php:81
+#: themes/digressit-wireframe/groups/single/admin.php:72
+#: themes/digressit-wireframe/groups/single/admin.php:82
+msgid "This group will be listed in the groups directory and in search results."
+msgstr "Ryhmä näkyy ryhmähakemistossa ja hakutuloksissa."
+
+#: themes/digressit-wireframe/groups/create.php:73
+#: themes/digressit-wireframe/groups/single/admin.php:73
+msgid "Group content and activity will be visible to any site member."
+msgstr "Ryhmän sisällöt ja toiminta näkyy kenelle tahansa sivuston käyttäjälle."
+
+#: themes/digressit-wireframe/groups/create.php:78
+#: themes/digressit-wireframe/groups/single/admin.php:79
+msgid "This is a private group"
+msgstr "Ryhmä on yksityinen"
+
+#: themes/digressit-wireframe/groups/create.php:80
+#: themes/digressit-wireframe/groups/single/admin.php:81
+msgid "Only users who request membership and are accepted can join the group."
+msgstr ""
+
+#: themes/digressit-wireframe/groups/create.php:82
+#: themes/digressit-wireframe/groups/create.php:91
+#: themes/digressit-wireframe/groups/single/admin.php:83
+#: themes/digressit-wireframe/groups/single/admin.php:93
+msgid "Group content and activity will only be visible to members of the group."
+msgstr "Ryhmän sisällöt ja toiminta näkyy kenelle tahansa sivuston käyttäjälle."
+
+#: themes/digressit-wireframe/groups/create.php:87
+#: themes/digressit-wireframe/groups/single/admin.php:89
+msgid "This is a hidden group"
+msgstr "Ryhmä on piilotettu"
+
+#: themes/digressit-wireframe/groups/create.php:89
+#: themes/digressit-wireframe/groups/single/admin.php:91
+msgid "Only users who are invited can join the group."
+msgstr ""
+
+#: themes/digressit-wireframe/groups/create.php:90
+#: themes/digressit-wireframe/groups/single/admin.php:92
+msgid "This group will not be listed in the groups directory or search results."
+msgstr ""
+
+#: themes/digressit-wireframe/groups/create.php:114
+#: themes/digressit-wireframe/groups/single/admin.php:110
+msgid "Upload an image to use as an avatar for this group. The image will be shown on the main group page, and in search results."
+msgstr ""
+
+#: themes/digressit-wireframe/groups/create.php:118
+#: themes/digressit-wireframe/groups/single/admin.php:114
+#: themes/digressit-wireframe/members/single/profile/change-avatar.php:24
+#: themes/digressit-wireframe/registration/register.php:250
+msgid "Upload Image"
+msgstr "Siirrä kuva"
+
+#: themes/digressit-wireframe/groups/create.php:122
+msgid "To skip the avatar upload process, hit the \"Next Step\" button."
+msgstr ""
+
+#: themes/digressit-wireframe/groups/create.php:129
+msgid "Crop Group Avatar"
+msgstr "Rajaa ryhmän avatar"
+
+#: themes/digressit-wireframe/groups/create.php:131
+#: themes/digressit-wireframe/groups/single/admin.php:134
+#: themes/digressit-wireframe/members/single/profile/change-avatar.php:41
+#: themes/digressit-wireframe/registration/register.php:264
+msgid "Avatar to crop"
+msgstr "Rajattava avatar"
+
+#: themes/digressit-wireframe/groups/create.php:134
+#: themes/digressit-wireframe/groups/single/admin.php:137
+#: themes/digressit-wireframe/members/single/profile/change-avatar.php:44
+#: themes/digressit-wireframe/registration/register.php:267
+msgid "Avatar preview"
+msgstr "Avatarin esikatselu"
+
+#: themes/digressit-wireframe/groups/create.php:137
+#: themes/digressit-wireframe/groups/single/admin.php:140
+#: themes/digressit-wireframe/members/single/profile/change-avatar.php:47
+#: themes/digressit-wireframe/registration/register.php:270
+msgid "Crop Image"
+msgstr "Kuvan rajaus"
+
+#: themes/digressit-wireframe/groups/create.php:175
+#: themes/digressit-wireframe/groups/single/send-invites.php:22
+msgid "Select people to invite from your friends list."
+msgstr ""
+
+#: themes/digressit-wireframe/groups/create.php:191
+#: themes/digressit-wireframe/groups/single/send-invites.php:42
+msgid "Remove Invite"
+msgstr "Poista kutsu"
+
+#: themes/digressit-wireframe/groups/create.php:206
+#: themes/digressit-wireframe/groups/single/send-invites.php:72
+msgid "Once you have built up friend connections you will be able to invite others to your group. You can send invites any time in the future by selecting the \"Send Invites\" option when viewing your new group."
+msgstr ""
+
+#: themes/digressit-wireframe/groups/create.php:224
+msgid "Previous Step"
+msgstr "&laquo; Edellinen"
+
+#: themes/digressit-wireframe/groups/create.php:229
+msgid "Next Step"
+msgstr "Seuraava &raquo;"
+
+#: themes/digressit-wireframe/groups/create.php:234
+msgid "Create Group and Continue"
+msgstr "Luo ryhmä ja jatka"
+
+#: themes/digressit-wireframe/groups/create.php:239
+msgid "Finish"
+msgstr "Viimistele"
+
+#: themes/digressit-wireframe/groups/groups-loop.php:29
+#: themes/digressit-wireframe/groups/single/group-header.php:31
+msgid "active %s ago"
+msgstr "Viimeksi aktiivinen"
+
+#: themes/digressit-wireframe/groups/groups-loop.php:57
+msgid "There were no groups found."
+msgstr "Ryhmiä ei löytynyt."
+
+#: themes/digressit-wireframe/groups/index.php:17
+msgid "All Groups (%s)"
+msgstr "Kaikki ryhmät (%s)"
+
+#: themes/digressit-wireframe/groups/index.php:30
+#: themes/digressit-wireframe/members/single/groups.php:13
+msgid "Most Members"
+msgstr "Eniten jäseniä"
+
+#: themes/digressit-wireframe/groups/index.php:31
+#: themes/digressit-wireframe/members/single/groups.php:14
+msgid "Newly Created"
+msgstr "Luontipäivämäärä"
+
+#: themes/digressit-wireframe/groups/single/admin.php:16
+msgid "Group Name"
+msgstr "Ryhmän nimi"
+
+#: themes/digressit-wireframe/groups/single/admin.php:19
+msgid "Group Description"
+msgstr "Ryhmän kuvaus"
+
+#: themes/digressit-wireframe/groups/single/admin.php:25
+msgid "Notify group members of changes via email"
+msgstr "Ilmoita ryhmän jäsenille muutoksista sähköpostitse"
+
+#: themes/digressit-wireframe/groups/single/admin.php:26
+#: themes/digressit-wireframe/registration/register.php:202
+msgid "Yes"
+msgstr "Kyllä"
+
+#: themes/digressit-wireframe/groups/single/admin.php:27
+#: themes/digressit-wireframe/registration/register.php:203
+msgid "No"
+msgstr "Ei"
+
+#: themes/digressit-wireframe/groups/single/admin.php:119
+msgid "If you'd like to remove the existing avatar but not upload a new one, please use the delete avatar button."
+msgstr ""
+
+#: themes/digressit-wireframe/groups/single/admin.php:122
+#: themes/digressit-wireframe/members/single/profile/change-avatar.php:30
+msgid "Delete Avatar"
+msgstr "Poista avatar"
+
+#: themes/digressit-wireframe/groups/single/admin.php:132
+msgid "Crop Avatar"
+msgstr "Avatarin rajaus"
+
+#: themes/digressit-wireframe/groups/single/admin.php:160
+msgid "Administrators"
+msgstr "Ylläpitäjät"
+
+#: themes/digressit-wireframe/groups/single/admin.php:167
+msgid "Moderators"
+msgstr "Moderaattorit"
+
+#: themes/digressit-wireframe/groups/single/admin.php:174
+msgid "Members"
+msgstr "Kirjoittajat"
+
+#: themes/digressit-wireframe/groups/single/admin.php:202
+msgid "(banned)"
+msgstr "(porttikielto)"
+
+#: themes/digressit-wireframe/groups/single/admin.php:202
+#: themes/digressit-wireframe/groups/single/admin.php:208
+msgid "Kick and ban this member"
+msgstr "Anna käyttäjälle porttikielto"
+
+#: themes/digressit-wireframe/groups/single/admin.php:202
+msgid "Remove Ban"
+msgstr "Kumoa porttikielto"
+
+#: themes/digressit-wireframe/groups/single/admin.php:208
+msgid "Kick &amp; Ban"
+msgstr "Anna käyttäjälle porttikielto"
+
+#: themes/digressit-wireframe/groups/single/admin.php:208
+msgid "Promote to Mod"
+msgstr "Anna moderaattorioikeudet"
+
+#: themes/digressit-wireframe/groups/single/admin.php:208
+msgid "Promote to Admin"
+msgstr "Anna ylläpitäjäoikeudet"
+
+#: themes/digressit-wireframe/groups/single/admin.php:221
+#: themes/digressit-wireframe/groups/single/members.php:51
+msgid "This group has no members."
+msgstr "Ryhmään ei kuulu käyttäjiä."
+
+#: themes/digressit-wireframe/groups/single/admin.php:252
+#: themes/digressit-wireframe/members/single/friends/requests.php:28
+#: themes/digressit-wireframe/members/single/groups/invites.php:27
+msgid "Accept"
+msgstr "Hyväksy"
+
+#: themes/digressit-wireframe/groups/single/admin.php:258
+#: themes/digressit-wireframe/members/single/friends/requests.php:29
+#: themes/digressit-wireframe/members/single/groups/invites.php:28
+msgid "Reject"
+msgstr "Hylkää"
+
+#: themes/digressit-wireframe/groups/single/admin.php:272
+msgid "There are no pending membership requests."
+msgstr "Jäsenyyspyyntöjä ei ole odottamassa."
+
+#: themes/digressit-wireframe/groups/single/admin.php:289
+msgid "WARNING: Deleting this group will completely remove ALL content associated with it. There is no way back, please be careful with this option."
+msgstr ""
+
+#: themes/digressit-wireframe/groups/single/admin.php:292
+msgid "I understand the consequences of deleting this group."
+msgstr "Ymmärrän mitä ryhmän poistaminen tarkoittaa."
+
+#: themes/digressit-wireframe/groups/single/admin.php:297
+msgid "Delete Group"
+msgstr "Luo ryhmä"
+
+#: themes/digressit-wireframe/groups/single/forum/edit.php:7
+#: themes/digressit-wireframe/groups/single/forum/topic.php:19
+msgid "Group Forum"
+msgstr "Kirjoitus ryhmäkeskustelussa: "
+
+#: themes/digressit-wireframe/groups/single/forum/edit.php:7
+#: themes/digressit-wireframe/groups/single/forum/topic.php:19
+msgid "Group Forum Directory"
+msgstr "Ryhmäkeskustelujen hamekimsto"
+
+#: themes/digressit-wireframe/groups/single/forum/edit.php:22
+msgid "Edit Topic:"
+msgstr "Aiheen otsikko"
+
+#: themes/digressit-wireframe/groups/single/forum/edit.php:44
+msgid "Edit Post:"
+msgstr "Muokkaa artikkelia:"
+
+#: themes/digressit-wireframe/groups/single/forum/edit.php:65
+msgid "This topic does not exist."
+msgstr "Lisäosan tiedostoa ei ole olemassa."
+
+#: themes/digressit-wireframe/groups/single/forum/topic.php:34
+msgid "%s said %s ago:"
+msgstr "%s kirjoitti %s sitten:"
+
+#: themes/digressit-wireframe/groups/single/forum/topic.php:45
+msgid "Permanent link to this post"
+msgstr "Kiinnitä tämä artikkeli etusivulle"
+
+#: themes/digressit-wireframe/groups/single/forum/topic.php:74
+msgid "You will auto join this group when you reply to this topic."
+msgstr ""
+
+#: themes/digressit-wireframe/groups/single/forum/topic.php:79
+msgid "Add a reply:"
+msgstr "Vastaus:"
+
+#: themes/digressit-wireframe/groups/single/forum/topic.php:84
+msgid "Post Reply"
+msgstr "Peruuta vastaus"
+
+#: themes/digressit-wireframe/groups/single/forum/topic.php:95
+msgid "This topic is closed, replies are no longer accepted."
+msgstr ""
+
+#: themes/digressit-wireframe/groups/single/forum/topic.php:108
+msgid "There are no posts for this topic."
+msgstr "Tälle vimpaimelle ei ole asetuksia."
+
+#: themes/digressit-wireframe/groups/single/forum.php:25
+msgid "You will auto join this group when you start a new topic."
+msgstr ""
+
+#: themes/digressit-wireframe/groups/single/group-header.php:6
+msgid "Group Admins"
+msgstr "Ryhmän ylläpitäjät"
+
+#: themes/digressit-wireframe/groups/single/group-header.php:14
+msgid "Group Mods"
+msgstr "Ryhmän moderaattorit"
+
+#: themes/digressit-wireframe/groups/single/request-membership.php:4
+msgid "You are requesting to become a member of the group '%s'."
+msgstr "Olet hakemassa ryhmän '%s' jäsenyyttä."
+
+#: themes/digressit-wireframe/groups/single/request-membership.php:7
+msgid "Comments (optional)"
+msgstr "%1$s %2$s %3$s kommenttien syöte"
+
+#: themes/digressit-wireframe/groups/single/request-membership.php:12
+msgid "Send Request"
+msgstr "Lähetetäänkö salasana?"
+
+#: themes/digressit-wireframe/groups/single/send-invites.php:60
+msgid "Send Invites"
+msgstr "Lähetetäänkö salasana?"
+
+#: themes/digressit-wireframe/header.php:46
+msgid "My Account"
+msgstr "Oma käyttäjätili"
+
+#: themes/digressit-wireframe/header.php:47
+msgid "Logout"
+msgstr "Kirjaudu ulos"
+
+#: themes/digressit-wireframe/header.php:50
+msgid "Register"
+msgstr "Rekisteröidy"
+
+#: themes/digressit-wireframe/header.php:52
+msgid "Login"
+msgstr "Käyttäjätunnus"
+
+#: themes/digressit-wireframe/members/index.php:15
+msgid "Members Directory"
+msgstr "Ryhmähakemisto"
+
+#: themes/digressit-wireframe/members/index.php:38
+#: themes/digressit-wireframe/members/single/friends.php:12
+msgid "Newest Registered"
+msgstr "Uusimmat lisäosat"
+
+#: themes/digressit-wireframe/members/members-loop.php:77
+msgid "Sorry, no members were found."
+msgstr "Haulla ei löytynyt käyttäjiä."
+
+#: themes/digressit-wireframe/members/single/friends/requests.php:43
+msgid "You have no pending friendship requests."
+msgstr "Jäsenyyspyyntöjä ei ole odottamassa."
+
+#: themes/digressit-wireframe/members/single/groups/invites.php:18
+msgid "%s members"
+msgstr "Kirjoittajat"
+
+#: themes/digressit-wireframe/members/single/groups/invites.php:41
+msgid "You have no outstanding group invites."
+msgstr ""
+
+#: themes/digressit-wireframe/members/single/member-header.php:30
+msgid "Mention this user in a new public message, this will send the user a notification to get their attention."
+msgstr ""
+
+#: themes/digressit-wireframe/members/single/member-header.php:30
+msgid "Mention this User"
+msgstr "Käyttäjä poistettiin tältä sivustolta."
+
+#: themes/digressit-wireframe/members/single/member-header.php:36
+msgid "Send a private message to this user."
+msgstr "Lähetä tämä salasana uudelle käyttäjälle sähköpostilla."
+
+#: themes/digressit-wireframe/members/single/member-header.php:36
+msgid "Send Private Message"
+msgstr "Mukautettu ylläpitotilaviesti."
+
+#: themes/digressit-wireframe/members/single/messages/compose.php:12
+msgid "Send To (Username or Friend's Name)"
+msgstr "Vastaanottaja (käyttäjänimi tai kontaktin nimi)"
+
+#: themes/digressit-wireframe/members/single/messages/compose.php:21
+msgid "This is a notice to all users."
+msgstr "Tämä on huomautus kaikille käyttäjille."
+
+#: themes/digressit-wireframe/members/single/messages/compose.php:24
+msgid "Subject"
+msgstr "Aihe"
+
+#: themes/digressit-wireframe/members/single/messages/compose.php:27
+msgid "Message"
+msgstr "Mukautettu ylläpitotilaviesti."
+
+#: themes/digressit-wireframe/members/single/messages/compose.php:35
+msgid "Send Message"
+msgstr "Lähetetäänkö salasana?"
+
+#: themes/digressit-wireframe/members/single/messages/messages-loop.php:38
+msgid "From:"
+msgstr "Lähettäjä:"
+
+#: themes/digressit-wireframe/members/single/messages/messages-loop.php:43
+msgid "To:"
+msgstr "Vastaanottaja:"
+
+#: themes/digressit-wireframe/members/single/messages/messages-loop.php:49
+msgid "View Message"
+msgstr "Otenäkymä"
+
+#: themes/digressit-wireframe/members/single/messages/messages-loop.php:57
+#: themes/digressit-wireframe/members/single/messages/notices-loop.php:45
+msgid "Delete Message"
+msgstr "Poista galleria"
+
+#: themes/digressit-wireframe/members/single/messages/messages-loop.php:75
+msgid "Sorry, no messages were found."
+msgstr "Haulla ei löytynyt viestejä."
+
+#: themes/digressit-wireframe/members/single/messages/notices-loop.php:38
+msgid "Sent:"
+msgstr "Lähetetty:"
+
+#: themes/digressit-wireframe/members/single/messages/notices-loop.php:56
+msgid "Sorry, no notices were found."
+msgstr "Haulla ei löytynyt ilmoituksia."
+
+#: themes/digressit-wireframe/members/single/messages/single.php:18
+msgid "Sent between %s and %s"
+msgstr "Hyväksy ja vastaa"
+
+#: themes/digressit-wireframe/members/single/messages/single.php:70
+msgid "Send a Reply"
+msgstr "Peruuta vastaus"
+
+#: themes/digressit-wireframe/members/single/messages/single.php:86
+msgid "Send Reply"
+msgstr "Peruuta vastaus"
+
+#: themes/digressit-wireframe/members/single/profile/change-avatar.php:8
+msgid "Change Avatar"
+msgstr "Avatarien näyttö"
+
+#: themes/digressit-wireframe/members/single/profile/change-avatar.php:14
+msgid "Your avatar will be used on your profile and throughout the site. If there is a <a href=\"http://gravatar.com\">Gravatar</a> associated with your account email we will use that, or you can upload an image from your computer."
+msgstr ""
+
+#: themes/digressit-wireframe/members/single/profile/change-avatar.php:20
+msgid "Click below to select a JPG, GIF or PNG format photo from your computer and then click 'Upload Image' to proceed."
+msgstr ""
+
+#: themes/digressit-wireframe/members/single/profile/change-avatar.php:29
+msgid "If you'd like to delete your current avatar but not upload a new one, please use the delete avatar button."
+msgstr ""
+
+#: themes/digressit-wireframe/members/single/profile/change-avatar.php:30
+msgid "Delete My Avatar"
+msgstr "Rajaa ryhmän avatar"
+
+#: themes/digressit-wireframe/members/single/profile/change-avatar.php:39
+#: themes/digressit-wireframe/registration/register.php:262
+msgid "Crop Your New Avatar"
+msgstr "Kirjoita uusi salasanasi alle."
+
+#: themes/digressit-wireframe/members/single/profile/change-avatar.php:63
+msgid "Your avatar will be used on your profile and throughout the site. To change your avatar, please create an account with <a href=\"http://gravatar.com\">Gravatar</a> using the same email address as you used to register with this site."
+msgstr ""
+
+#: themes/digressit-wireframe/members/single/profile/edit.php:16
+msgid "Editing '%s' Profile Group"
+msgstr "Kirjoitettu ryhmässä"
+
+#: themes/digressit-wireframe/members/single/profile/edit.php:68
+#: themes/digressit-wireframe/registration/register.php:117
+msgid "Clear"
+msgstr "tyhjennä"
+
+#: themes/digressit-wireframe/page.php:31
+#: themes/digressit-wireframe/single.php:31
+msgid "This post is password protected. To view it please enter your password below:"
+msgstr "Tämä artikkeli on suojattu salasanalla. Syötä salasanasi:"
+
+#: themes/digressit-wireframe/registration/activate.php:23
+msgid "Account Activated"
+msgstr "Käyttäjätili on aktivoitu"
+
+#: themes/digressit-wireframe/registration/activate.php:28
+msgid "Your account was activated successfully! Your account details have been sent to you in a separate email."
+msgstr ""
+
+#: themes/digressit-wireframe/registration/activate.php:30
+msgid "Your account was activated successfully! You can now log in with the username and password you provided when you signed up."
+msgstr ""
+
+#: themes/digressit-wireframe/registration/activate.php:35
+msgid "Activate your Account"
+msgstr "Ota käyttäjätunnus käyttöön"
+
+#: themes/digressit-wireframe/registration/activate.php:39
+msgid "Please provide a valid activation key."
+msgstr ""
+
+#: themes/digressit-wireframe/registration/activate.php:43
+msgid "Activation Key:"
+msgstr "Aktivointiavain:"
+
+#: themes/digressit-wireframe/registration/activate.php:47
+msgid "Activate"
+msgstr "Ota käyttöön"
+
+#: themes/digressit-wireframe/registration/register.php:21
+msgid "Create an Account"
+msgstr "Luo käyttäjätili"
+
+#: themes/digressit-wireframe/registration/register.php:25
+msgid "Registering for this site is easy, just fill in the fields below and we'll get a new account set up for you in no time."
+msgstr ""
+
+#: themes/digressit-wireframe/registration/register.php:33
+msgid "Account Details"
+msgstr "Käyttäjätilin tiedot"
+
+#: themes/digressit-wireframe/registration/register.php:39
+msgid "Email Address"
+msgstr "Sähköpostiosoite"
+
+#: themes/digressit-wireframe/registration/register.php:43
+msgid "Choose a Password"
+msgstr "Valitse salasana"
+
+#: themes/digressit-wireframe/registration/register.php:47
+msgid "Confirm Password"
+msgstr "Varmista uusi salasana"
+
+#: themes/digressit-wireframe/registration/register.php:63
+msgid "Profile Details"
+msgstr "Profiilin tiedot"
+
+#: themes/digressit-wireframe/registration/register.php:180
+msgid "Blog Details"
+msgstr "Blogin tiedot"
+
+#: themes/digressit-wireframe/registration/register.php:182
+msgid "Yes, I'd like to create a new blog"
+msgstr ""
+
+#: themes/digressit-wireframe/registration/register.php:186
+msgid "Blog URL"
+msgstr "Base URL"
+
+#: themes/digressit-wireframe/registration/register.php:195
+msgid "Blog Title"
+msgstr "Blogin otsikko"
+
+#: themes/digressit-wireframe/registration/register.php:199
+msgid "I would like my blog to appear in search engines, and in public listings around this site"
+msgstr ""
+
+#: themes/digressit-wireframe/registration/register.php:216
+msgid "Complete Sign Up"
+msgstr "Tunnuksien luonti on valmis!"
+
+#: themes/digressit-wireframe/registration/register.php:227
+msgid "Sign Up Complete!"
+msgstr "Tunnuksien luonti on valmis!"
+
+#: themes/digressit-wireframe/registration/register.php:232
+msgid "You have successfully created your account! To begin using this site you will need to activate your account via the email we have just sent to your address."
+msgstr ""
+
+#: themes/digressit-wireframe/registration/register.php:234
+msgid "You have successfully created your account! Please log in using the username and password you have just created."
+msgstr ""
+
+#: themes/digressit-wireframe/registration/register.php:241
+msgid "Your Current Avatar"
+msgstr "Nykyinen avatar"
+
+#: themes/digressit-wireframe/registration/register.php:242
+msgid "We've fetched an avatar for your new account. If you'd like to change this, why not upload a new one?"
+msgstr ""
+
+#: themes/digressit-wireframe/search.php:41
+msgid "No Results"
+msgstr "Ei tuloksia."
+
+msgid "Comment Count"
+msgstr "Kommenttien lukumäärä"
+
+msgid "Numbers"
+msgstr "Numeroitu"
+
+msgid "Left"
+msgstr "Vasen"
+
+msgid "Right"
+msgstr "Oikea"
+
+msgid "Section Number"
+msgstr "Osion numero"
+
+msgid "Ascending"
+msgstr "Nouseva"
+
+msgid "Descending"
+msgstr "Laskeva"
+
+msgid "Date"
+msgstr "Päivämäärä"
+
+msgid "Pages"
+msgstr "Sivut"
+
+msgid "Custom Digress.it Type"
+msgstr "Digress.it -sisältötyyppi"
+

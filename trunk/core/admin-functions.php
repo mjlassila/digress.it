@@ -1,8 +1,8 @@
 <?php
 /**
- * 
+ *
  */
-function digressit_add_comment_change_notice() {    
+function digressit_add_comment_change_notice() {
     $comments= get_approved_comments($_GET['post']);
     if(count($comments)){
         add_action('admin_notices', 'digressit_change_content_warning' );
@@ -11,34 +11,34 @@ function digressit_add_comment_change_notice() {
 
 
 /**
- * 
+ *
  */
-function digressit_custom_type_notice() {    
-    add_action('admin_notices', 'digressit_navigation_custom_type_notice' );    
+function digressit_custom_type_notice() {
+    add_action('admin_notices', 'digressit_navigation_custom_type_notice' );
 }
 
 
 /**
- * 
+ *
  */
 function digressit_navigation_custom_type_notice(){
     ?>
-    <div id="register-form" class="updated error" style="padding: 5px; width: 99% <?php echo $hidethis;?>" >        
+    <div id="register-form" class="updated error" style="padding: 5px; width: 99% <?php echo $hidethis;?>" >
         <?php _e('Warning: These posts wont'); ?>
     </div>
-    <?php    
+    <?php
 }
 
 
 /**
- * 
+ *
  */
 function digressit_change_content_warning(){
     ?>
-    <div id="register-form" class="updated error" style="padding: 5px; width: 99% <?php echo $hidethis;?>" >        
+    <div id="register-form" class="updated error" style="padding: 5px; width: 99% <?php echo $hidethis;?>" >
         <?php _e('Warning: There are comments attached to the structure of this page. Changing the structure of this post will break the alignment of comments to their paragraphs'); ?>
     </div>
-    <?php    
+    <?php
 }
 
 /**
@@ -57,33 +57,33 @@ function digressit_add_admin_menu() {
  *
  */
 function digressit_permalink_required_notice(){
-    echo "<div id='permalink-required-notice' class='updated fade'><p>".__("Warning: Digress.it requires permalinks to be enabled. Please go to <a href='").get_bloginfo('url')."/wp-admin/options-permalink.php'>".__('Permalink Settings</a> and make sure that <b>Default</b> is not selected')."</p></div>";    
+    echo "<div id='permalink-required-notice' class='updated fade'><p>".__("Warning: Digress.it requires permalinks to be enabled. Please go to <a href='").get_bloginfo('url')."/wp-admin/options-permalink.php'>".__('Permalink Settings</a> and make sure that <b>Default</b> is not selected')."</p></div>";
 }
 
-    
+
 /**
- * 
+ *
  */
 function digressit_theme_options_page_form(){
-    
+
     if($_POST && is_admin()){
-        
+
         if($_GET['page'] == 'digressit.php' && isset($_POST['reset']) && $_POST['reset'] == 'Reset Options'){
             delete_option('digressit');
-            activate_digressit();        
+            activate_digressit();
         }
         elseif($_GET['page'] == 'digressit.php' && isset($_POST['update-digressit-options'])){
             $digressit_options = get_option('digressit');
-            
+
             $_POST['digressit_enabled_for_posts'] = ($_POST['digressit_enabled_for_posts']) ? 1 : 0;
             $_POST['digressit_enabled_for_pages'] = ($_POST['digressit_enabled_for_pages']) ? 1 : 0;
             $_POST['digressit_enabled_for_digressit_type'] = ($_POST['digressit_enabled_for_digressit_type']) ? 1 : 0;
 
-        
+
             foreach($_POST as $key => $value){
                 $digressit_options[$key] = $value;
             }
-        
+
             delete_option('digressit');
             add_option('digressit', $digressit_options);
         }
@@ -96,9 +96,9 @@ function digressit_theme_options_page_form(){
  */
 function digressit_theme_options_page() {
     global $wpdb, $digressit_content_function, $digressit_comments_function, $digressit_commentbox_function, $blog_id;
-    
+
     digressit_theme_options_page_form();
-    
+
     $digressit_options = get_option('digressit');
     ?>
 
@@ -111,11 +111,11 @@ function digressit_theme_options_page() {
         }
          .form-table tr{
             border-bottom: 1px solid #eee;
-        }    
+        }
     </style>
 
       <div class="wrap" style="position: relative; font-size: 110%;">
-    
+
         <form method="post" action="<?php $PHP_SELF; ?>">
 
         <div class="icon32" id="icon-themes"><br></div>
@@ -123,10 +123,10 @@ function digressit_theme_options_page() {
 
         <table class="form-table" style="vertical-align: top; width: 800px; padding: 0; margin: 0" >
 
-        <?php   
+        <?php
         $pages = null;
         foreach(get_pages() as $page){
-            $pages[$page->post_title] = $page->ID;            
+            $pages[$page->post_title] = $page->ID;
         }
         ?>
         <tr>
@@ -138,9 +138,9 @@ function digressit_theme_options_page() {
         <tr valign="top">
             <td style="width: 200px"><b><?php _e('Enable Digress.it', 'digressit');  ?></b></td>
             <td>
-                <p><input type="checkbox" name="digressit_enabled_for_posts" <?php echo (int)$digressit_options['digressit_enabled_for_posts']===1 ? ' checked ' : ''; ?>/> Posts</p>
-                <p><input type="checkbox" name="digressit_enabled_for_pages" <?php echo (int)$digressit_options['digressit_enabled_for_pages']===1 ? ' checked ' : ''; ?>/> Pages</p>
-                <p><input type="checkbox" name="digressit_enabled_for_digressit_type" <?php echo (int)$digressit_options['digressit_enabled_for_digressit_type']===1 ? ' checked ' : ''; ?>/> Custom Digress.it Type</p>
+                <p><input type="checkbox" name="digressit_enabled_for_posts" <?php echo (int)$digressit_options['digressit_enabled_for_posts']===1 ? ' checked ' : ''; ?>/><?php _e('Posts', 'digressit'); ?></p>
+                <p><input type="checkbox" name="digressit_enabled_for_pages" <?php echo (int)$digressit_options['digressit_enabled_for_pages']===1 ? ' checked ' : ''; ?>/><?php _e('Pages', 'digressit'); ?></p>
+                <p><input type="checkbox" name="digressit_enabled_for_digressit_type" <?php echo (int)$digressit_options['digressit_enabled_for_digressit_type']===1 ? ' checked ' : ''; ?>/><?php _e('Custom Digress.it Type', 'digressit'); ?></p>
             </td>
             <td>
                 <p><?php _e("The content of this page will be the first thing a visitor to your website will see.", 'digressit'); ?></p>            
@@ -154,7 +154,7 @@ function digressit_theme_options_page() {
             
             <?php
 
-            $front_page_menu_items = array('Posts' => 'posts', 'Pages' => 'pages', 'Digress.it Custom Type' => 'custom');
+            $front_page_menu_items = array(__('Posts') => 'posts', __('Pages') => 'pages', __('Digress.it Custom Type') => 'custom');
             ?>
             
             <td><?php digressit_print_dropdown('front_page_menu', $front_page_menu_items , $digressit_options['front_page_menu']); ?></td>
@@ -167,13 +167,13 @@ function digressit_theme_options_page() {
 
         <tr valign="top">
             <td style="width: 200px"><b><?php _e('Front Page Order', 'digressit');  ?></b></td>
-            <td><?php digressit_print_dropdown('front_page_order_by', array('ID' => 'id', 'Date' => 'date'), $digressit_options['front_page_order_by']); ?></td>
+            <td><?php digressit_print_dropdown('front_page_order_by', array('ID' => 'id', __('Date', 'digressit') => 'date'), $digressit_options['front_page_order_by']); ?></td>
         </tr>
 
 
         <tr valign="top">
             <td style="width: 200px"><b><?php _e('Front Page Order by', 'digressit');  ?></b></td>
-            <td><?php digressit_print_dropdown('front_page_order', array('Ascending' => 'ASC', 'Descending' => 'DESC'), $digressit_options['front_page_order']); ?></td>
+            <td><?php digressit_print_dropdown('front_page_order', array(__('Ascending', 'digressit') => 'ASC', __('Descending', 'digressit') => 'DESC'), $digressit_options['front_page_order']); ?></td>
             <td>
                 <p></p>            
             </td>
@@ -229,7 +229,7 @@ function digressit_theme_options_page() {
 
         <tr valign="top">
             <td style="width: 200px"><b><?php _e('Keyboard Navigation', 'digressit');  ?></b></td>
-            <td><?php digressit_print_dropdown('keyboard_navigation', array('No' => 0, 'Yes' => 1), $digressit_options['keyboard_navigation']); ?></td>
+            <td><?php digressit_print_dropdown('keyboard_navigation', array(__('No', 'digressit') => 0, __('Yes', 'digressit') => 1), $digressit_options['keyboard_navigation']); ?></td>
             <td>
                 <p></p>            
             </td>
@@ -238,7 +238,7 @@ function digressit_theme_options_page() {
 
         <tr valign="top">
             <td style="width: 200px"><b><?php _e('Enable Citation Button', 'digressit');  ?></b></td>
-            <td><?php digressit_print_dropdown('enable_citation_button', array('No' => 0, 'Yes' => 1), $digressit_options['enable_citation_button']); ?></td>
+            <td><?php digressit_print_dropdown('enable_citation_button', array(__('No', 'digressit') => 0, __('Yes', 'digressit') => 1), $digressit_options['enable_citation_button']); ?></td>
             <td>
                 <p></p>            
             </td>
@@ -247,7 +247,7 @@ function digressit_theme_options_page() {
 
         <tr valign="top">
             <td style="width: 200px"><b><?php _e('Enable Comment Tagging', 'digressit');  ?></b></td>
-            <td><?php digressit_print_dropdown('enable_comment_tagging', array('Yes' => 'yes', 'No' => 'no'), $digressit_options['enable_comment_tagging']); ?></td>
+            <td><?php digressit_print_dropdown('enable_comment_tagging', array(__('Yes', 'digressit') => 'yes', __('No', 'digressit') => 'no'), $digressit_options['enable_comment_tagging']); ?></td>
             <td>
                 <p></p>            
             </td>
@@ -256,7 +256,7 @@ function digressit_theme_options_page() {
 
         <tr valign="top">
             <td style="width: 200px"><b><?php _e('BuddyPress Support', 'digressit');  ?></b></td>
-            <td><?php digressit_print_dropdown('buddypress_support', array('Yes' => 'yes', 'No' => 'no'), $digressit_options['enable_comment_tagging']); ?></td>
+            <td><?php digressit_print_dropdown('buddypress_support', array(__('Yes', 'digressit') => 'yes', __('No', 'digressit') => 'no'), $digressit_options['enable_comment_tagging']); ?></td>
             <td>
                 <p></p>            
             </td>
@@ -282,7 +282,7 @@ function digressit_theme_options_page() {
 
         <tr valign="top">
             <td style="width: 200px"><b><?php _e('Allow General Comments', 'digressit');  ?></b></td>
-            <td><?php digressit_print_dropdown('allow_general_comments', array('No' => 0, 'Yes' => 1), $digressit_options['allow_general_comments']); ?></td>
+            <td><?php digressit_print_dropdown('allow_general_comments', array(__('No', 'digressit') => 0, __('Yes', 'digressit') => 1), $digressit_options['allow_general_comments']); ?></td>
             <td>
                 <p></p>            
             </td>
@@ -290,7 +290,7 @@ function digressit_theme_options_page() {
 
         <tr valign="top">
             <td style="width: 200px"><b><?php _e('Enable Instant Content Search', 'digressit');  ?></b></td>
-            <td><?php digressit_print_dropdown('enable_instant_content_search', array('No' => 'false', 'Yes' => 'true'), $digressit_options['enable_instant_content_search']); ?></td>
+            <td><?php digressit_print_dropdown('enable_instant_content_search', array(__('No', 'digressit') => 'false', __('Yes', 'digressit') => 'true'), $digressit_options['enable_instant_content_search']); ?></td>
             <td>
                 <p></p>            
             </td>
@@ -298,7 +298,7 @@ function digressit_theme_options_page() {
 
         <tr valign="top">
             <td style="width: 200px"><b><?php _e('Parse List Items', 'digressit');  ?></b></td>
-            <td><?php digressit_print_dropdown('parse_list_items', array('No' => 0, 'Yes' => 1), $digressit_options['parse_list_items']); ?></td>
+            <td><?php digressit_print_dropdown('parse_list_items', array(__('No', 'digressit') => 0, __('Yes', 'digressit') => 1), $digressit_options['parse_list_items']); ?></td>
             <td>
                 <p></p>            
             </td>
@@ -307,7 +307,7 @@ function digressit_theme_options_page() {
 
         <tr valign="top">
             <td style="width: 200px"><b><?php _e('Show Pages in Menu', 'digressit');  ?></b></td>
-            <td><?php digressit_print_dropdown('show_pages_in_menu', array('No' => 0, 'Yes' => 1), $digressit_options['show_pages_in_menu']); ?></td>
+            <td><?php digressit_print_dropdown('show_pages_in_menu', array(__('No', 'digressit') => 0, __('Yes', 'digressit') => 1), $digressit_options['show_pages_in_menu']); ?></td>
             <td>
                 <p></p>            
             </td>
@@ -315,30 +315,30 @@ function digressit_theme_options_page() {
 
         <tr valign="top">
             <td style="width: 200px"><b><?php _e('Enable Drop Down Menu', 'digressit');  ?></b></td>
-            <td><?php digressit_print_dropdown('enable_dropdown_menu', array('No' => 0, 'Yes' => 1), $digressit_options['enable_dropdown_menu']); ?></td>
+            <td><?php digressit_print_dropdown('enable_dropdown_menu', array(__('No', 'digressit') => 0, __('Yes', 'digressit') => 1), $digressit_options['enable_dropdown_menu']); ?></td>
         </tr>
 
 
         <tr valign="top">
             <td style="width: 200px"><b><?php _e('Enable Sidebar', 'digressit');  ?></b></td>
-            <td><?php digressit_print_dropdown('enable_sidebar', array('No' => 0, 'Yes' => 1), $digressit_options['enable_sidebar']); ?></td>
+            <td><?php digressit_print_dropdown('enable_sidebar', array(__('No', 'digressit') => 0, __('Yes', 'digressit') => 1), $digressit_options['enable_sidebar']); ?></td>
         </tr>
 
 
         <tr valign="top">
             <td style="width: 200px"><b><?php _e('Sidebar Position', 'digressit');  ?></b></td>
-            <td><?php digressit_print_dropdown('sidebar_position', array('Left' => 'sidebar-widget-position-left', 'Right' => 'sidebar-widget-position-right'), $digressit_options['sidebar_position']); ?></td>
+            <td><?php digressit_print_dropdown('sidebar_position', array(__('Left', 'digressit') => 'sidebar-widget-position-left', __('Right', 'digressit') => 'sidebar-widget-position-right'), $digressit_options['sidebar_position']); ?></td>
         </tr>
 
 
         <tr valign="top">
             <td style="width: 200px"><b><?php _e('Auto-hide Sidebar', 'digressit');  ?></b></td>
-            <td><?php digressit_print_dropdown('auto_hide_sidebar', array('No' => 'sidebar-widget-no-auto-hide', 'Yes' => 'sidebar-widget-auto-hide'), $digressit_options['auto_hide_sidebar']); ?></td>
+            <td><?php digressit_print_dropdown('auto_hide_sidebar', array(__('No', 'digressit') => 'sidebar-widget-no-auto-hide', __('Yes', 'digressit') => 'sidebar-widget-auto-hide'), $digressit_options['auto_hide_sidebar']); ?></td>
         </tr>
         
         <tr valign="top">
             <td style="width: 200px"><b><?php _e('In Sidebar Show', 'digressit');  ?></b></td>
-            <td><?php digressit_print_dropdown('show_comment_count_in_sidebar', array('Comment Count' => '1', 'Section Number' => 0), $digressit_options['show_comment_count_in_sidebar']); ?></td>
+            <td><?php digressit_print_dropdown('show_comment_count_in_sidebar', array(__('Comment Count', 'digressit') => '1', __('Section Number', 'digressit') => 0), $digressit_options['show_comment_count_in_sidebar']); ?></td>
         </tr>
 
 
@@ -379,7 +379,7 @@ function digressit_theme_options_page() {
         <?php if(is_super_admin()): ?>
         <tr>
             <td style="width: 200px"><b><?php _e('Debug Mode', 'digressit');  ?></b></td>
-            <td><?php digressit_print_dropdown('debug_mode', array('No' => 0, 'Yes' => '1'), $digressit_options['debug_mode']); ?></td>
+            <td><?php digressit_print_dropdown('debug_mode', array(__('No', 'digressit') => 0, __('Yes', 'digressit') => '1'), $digressit_options['debug_mode']); ?></td>
             <td></td>
         </tr>        
         <?php endif; ?>
